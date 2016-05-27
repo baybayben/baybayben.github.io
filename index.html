@@ -9,14 +9,14 @@
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
 	
-	<link media="all" rel="stylesheet" type="text/css" href="http://benrosati.com/css/style.css?version=2.0">
+	<link media="all" rel="stylesheet" type="text/css" href="http://www.benrosati.com/css/style.css?version=2.0">
 
 	
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="@benrosati" />
 	<meta property="og:title" content="Ben Rosati · Web Design &amp; Development Services">
 	<meta property="og:description" content="Independent Web designer and web developer. Available for contractual work, or full-time employment. Services for clients that seek an authentic one-on-one experience. We can begin to discover a direction that best fits your next project with a free, no commitment, consultation.">
-	<meta property="og:image" content="http://benrosati.com/img/meta.jpg">
+	<meta property="og:image" content="http://www.benrosati.com/img/meta.jpg">
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
@@ -576,15 +576,15 @@
 		<div class="form__title">Request a free consultation <span>(or... email <a href="mailto:ben.rosati@live.com">ben.rosati@live.com</a>)</span></div>
 		<div class="form__input form__input--name">
 			<label for="form__input__name">What is your name?</label>
-			<input id="form__input__name" class="form__input__name required" type="text" name="name" autocomplete="name" tabindex="1" />
+			<input id="form__input__name" class="form__input__name required" type="text" tabindex="1" />
 		</div>
 		<div class="form__input form__input--email">
 			<label for="form__input__email">What is your email address?</label>
-			<input id="form__input__email" class="form__input__email required" type="email" name="email" autocomplete="email" tabindex="2" />
+			<input id="form__input__email" class="form__input__email required" type="email" tabindex="2" />
 		</div>
 		<div class="form__input form__input--skype">
 			<label for="form__input__skype">What is your skype username? <i>Skype is my preferred method of direct communication for introduction calls and connecting to discuss milestones. If you prefer another platform though, please include it below (Google Hangout, Facetime, phone, ect...)</i></label>
-			<input id="form__input__skype" class="form__input__skype required" type="text" name="skype" autocomplete="skype" tabindex="3" />
+			<input id="form__input__skype" class="form__input__skype required" type="text" tabindex="3" />
 		</div>
 		<div class="form__input form__input--radio form__input--budget">
 			<label for="form__input__budget">Do you currently have a budget for this project? <i>We'll dive more into costs and expenses during our initial introduction, but it's best to formulate an ideal amount so that we can begin to prepare ideas for how the resources you have could be used.</i></label>
@@ -599,11 +599,11 @@
 		</div>
 		<div class="form__input form__input--textarea form__input--details">
 			<label   for="form__input__details">Can you briefly describe the project? <i>The more details the better; What is the end-goal for this project, how many people are on your team and what is your role, are there any challenges which might surface during our timeline?</i></label>
-			<textarea id="form__input__details" class="form__input__details required" name="details" rows="1"></textarea>
+			<textarea id="form__input__details" class="form__input__details required" name="details" rows="1" tabindex="4" ></textarea>
 		</div>
 		<div class="form__input form__input--textarea form__input--referral">
 			<label   for="form__input__referral">And lastly, how did you hear about me?</label>
-			<textarea id="form__input__referral" class="form__input__referral required" name="referral" rows="1"></textarea>
+			<textarea id="form__input__referral" class="form__input__referral required" name="referral" rows="1" tabindex="5" ></textarea>
 		</div>
 		<div class="form__submit action--request">Submit request</div>
 	</div>
@@ -719,18 +719,17 @@ jQuery(document).ready(function($) {
 		var valid = required( $('.form--request') );
 		$('.action--request').text('Processing...');
 		if ( valid == true ){
-
-			var message = "<p>Name: " + $('.form__input__name').val() + "</p>" +
-			"<p>Email: " + $('.form__input__email').val() + "</p>" +
-			"<p>Skype: " + $('.form__input__skype').val() + "</p>" +
-			"<p>Budget: " + $('input[name="budget"]:checked').val() + "</p>" +
-			"<p>Details:<br /> " + $('.form__input__details').val() + "</p>" +
-			"<p>Referral:<br /> " + $('.form__input__referral').val() + "</p>";
-
 			$.ajax({
-				url: "https://formspree.io/you@email.com",
+				url: "https://formspree.io/ben.rosati@live.com",
 				method: "POST",
-				data: { "name" : $('.form__input__name').val(), "email" : $('.form__input__email').val(), "message" : message },
+				data: { 
+					"name" : $('.form__input__name').val(),
+					"email" : $('.form__input__email').val(),
+					"skype"	: $('.form__input__skype').val(),
+					"budget" : $('input[name="budget"]:checked').val(),
+					"message" : $('.form__input__details').val(),
+					"referral"	: $('.form__input__referral').val()
+				},
 				dataType: "json",
 				success: function(data) { 
 					$('.form').slideUp();
@@ -739,7 +738,9 @@ jQuery(document).ready(function($) {
 		        error: function(xhr, textStatus, errorThrown) { console.log(textStatus, errorThrown); }
 			});
 
-		} else { $('.action--request').text("Check fields and resubmit"); }
+		} else { 
+			$('.action--request').text("Check fields and resubmit");
+		}
 	});
 	
 });
