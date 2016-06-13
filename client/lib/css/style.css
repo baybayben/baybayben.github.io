@@ -1,0 +1,182 @@
+/* THIS SHEET OF STYLE WAS MADE BY
+// n: Benjamin Rosati
+// e: ben.rosati@live.com
+// w: http://benrosati.com
+// b: copyright 2016
+
+/* -----------------------------------------------------------------------------*/
+/* /// FONTS                                                                    */
+/* -----------------------------------------------------------------------------*/
+
+@font-face {
+  font-family: "Tofino";
+  src: url("../fonts/tofino-n1.woff") format("woff");
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Tofino";
+  src: url("../fonts/tofino-n2.woff") format("woff");
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Tofino";
+  src: url("../fonts/tofino-n3.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Tofino";
+  src: url("../fonts/tofino-n4.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Tofino";
+  src: url("../fonts/tofino-n5.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Tofino";
+  src: url("../fonts/tofino-n6.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Tofino";
+  src: url("../fonts/tofino-n8.woff") format("woff");
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Tofino";
+  src: url("../fonts/tofino-n9.woff") format("woff");
+  font-style: normal;
+  font-weight: 900;
+}
+
+/* -----------------------------------------------------------------------------*/
+/* /// RESET                                                                    */
+/* -----------------------------------------------------------------------------*/
+
+*:before, *:after { content: none; box-sizing: inherit; }
+
+* {
+  height: auto;
+  color: #60666D;
+  font: 400 15px/1.5 'Tofino', sans-serif;
+  text-decoration: none;
+  list-style: none;
+  quotes: none;
+  background: transparent;
+  position: relative;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: inherit;
+}
+
+html {
+  width: 100%;
+  background: #fff;
+}
+
+body {
+  background: #fff;
+  overflow-y: scroll;
+}
+
+img, object, embed { max-width: 100%; vertical-align: middle; }
+textarea { resize: vertical; }
+button, input { -webkit-appearance: none; -moz-appearance: none; }
+
+/* Watch it burn to the ground. ==================================  */
+
+::-webkit-input-placeholder { color: #b8b8b8; margin: 0; line-height:1; padding-top: 2px; font-family: 'Roboto Condensed', sans-serif; font-weight: 300; font-size: 12px;  }
+::-webkit-textarea-placeholder { color: #b8b8b8; margin: 0; line-height:1; padding-top: 2px; font-family: 'Roboto Condensed', sans-serif; font-weight: 300; font-size: 12px;  }
+
+/* I wish I knew how to quit you ===============================  */
+
+h1,
+.alpha {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+h2,
+.beta {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+
+h3,
+.gamma {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+}
+
+h4,
+.delta {
+  font-size: 21px;
+}
+
+h5,
+.epsilon {
+  font-size: 12px;
+}
+
+h6,
+.zeta {
+  font-size: 17px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* -----------------------------------------------------------------------------*/
+/* /// MAIN                                                                     */
+/* -----------------------------------------------------------------------------*/
+
+main {
+  padding: 20px;
+}
+
+a { color: red }
+
+ul { margin: 5px 0 20px 20px; }
+
+#introText p {
+  color: #ccc;
+  font-size: 18px;
+  padding: 0 20px;
+}
+
+.introClose {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  background: #FF2020;
+  position: relative;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.introClose:hover {
+  background: #FF4040;
+  text-decoration: none;
+}
