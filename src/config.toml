@@ -1,0 +1,6 @@
+baseURL = "http://www.benrosati.com"
+languageCode = "en-us"
+title = "Ben Rosati · Web Design & Development Services"
+
+[params]
+	description = "Independent Web designer and web developer. Available for contractual work, or full-time employment. Services for clients that seek an authentic one-on-one experience. We can begin to discover a direction that best fits your next project with a free, no commitment, consultation."

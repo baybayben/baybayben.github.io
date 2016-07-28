@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8"> 
+
+	<title>{{ .Site.Title }}</title>
+	<meta name="description" content="{{ .Site.Params.description }}">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+	<!--Stylesheets-->
+	{{ partial "style.html" . }}
+
+	<!-- Social Metas -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@benrosati" />
+	<meta property="og:title" content="{{ .Site.Title }}">
+	<meta property="og:description" content="{{ .Site.Params.description }}">
+	<meta property="og:image" content="{{ .Site.BaseURL }}/img/meta.jpg">
+
+	{{ partial "scripts.html" . }}
+
+<script>
+console.log("%cDesign and development by http://benrosati.com", "color: #4fb06f; font-style: italic");
+
+//Check Required Fields
+function required(form){
+	var valid = true;
+	form.children().children(".required").each(function(){
+	 	$(this).parent().children("label").css("color", "inherit");
+		$(this).css("border-color", "#ccc");
+	 	if( $(this).is(':checkbox') && $(this).prop('checked') != true || $(this).val() == "" ){
+	 		valid = false;
+	 		$(this).parent().children("label").css("color", "rgb(255, 89, 89)");
+	 		$(this).css("border-color", "rgb(255, 89, 89)");
+	 	} 
+	});
+	return valid;
+}
+
+jQuery(document).ready(function($) {
+
+	//Prep
+	$(this).scrollTop(0);
+	TweenMax.set(".square1", {rotation:60});
+	TweenMax.set('.item, .item span', {opacity: 0, scale: 0.8});
+	TweenMax.set('.table__row', {scale: 0.8, opacity: 0, visibility: 'collapse', transformOrigin: '0 0'});
+
+	//Animate
+	var tl = new TimelineMax({delay:0.5});
+	TweenMax.to(".square1", 3, {delay: 1, y:50, opacity:1});
+	tl.to("body", 0.5, {opacity:1});
+	tl.from(".nav", 0.5, {height:0}, '+=0.25');
+	tl.from(".nav__logo", 0.4, {height:0, opacity: 0}, '+=0.25');
+	tl.from(".nav__name", 0.5, {y:'-20', opacity:0});
+	tl.from(".nav__request, .nav__request--small", 0.5, {y:20, opacity:0}, "-=0.5");
+	tl.from(".intro", 0.5, {y:'-10', opacity: 0}, "+=0.25");
+	tl.from(".items h3", 0.5, {y:'-10', opacity: 0});
+	tl.staggerTo('.item', 0.5, {scale: 1, opacity: 1}, 0.1);
+	tl.from(".compendium h3", 0.5, {y:'-10', opacity: 0});
+	tl.staggerTo('.table__row', 0.5, {scale: 1, opacity: 1, visibility: 'visible'}, 0.1);
+	tl.from(".cta", 0.5, {y:'-10', opacity: 0}, "+=0.25");
+	tl.from(".boot", 0.25, {opacity:0});
+
+	//Hover
+	$('.item a').hover(function(){
+		TweenMax.to($(this).children('span'), 0.25, {opacity: 1, scale: 1})
+	}, function(){
+		TweenMax.to($(this).children('span'), 0.25, {opacity: 0, scale: 0.8})
+	});
+
+	$('.nav__request').hover(function(){
+		TweenMax.to($(this), 0.25, {x: 10});
+	}, function(){
+		TweenMax.to($(this), 0.25, {x: 0});
+	});
+
+	//Form
+	autosize($('textarea'));
+
+	function resize(){
+
+		if( $(window).width() > 499 ){
+			$('.action--form').attr('href', '#small-dialog');
+		} else {
+			$('.action--form').attr('href', 'mailto:ben.rosati@live.com');
+		}
+
+	}
+
+	$(window).resize(function(){ resize(); });
+
+	resize();
+
+	//Case Studies
+	$('a[href="#details"]').click(function(event){
+
+		event.preventDefault();
+
+		$clicked = $(this);
+
+		var items = [];
+
+		$( $clicked.attr('href') ).find('.details').each(function() {
+			items.push({
+				type: 'inline',
+				src: $(this) 
+		    });
+		});
+
+		$.magnificPopup.open({
+			items: items,
+			midClick: true,
+			preloader: false,
+			closeBtnInside: false,
+			mainClass: 'my-mfp-zoom-in',
+			gallery: {
+				enabled: true
+			},
+			callbacks: {
+				open: function() {
+					var magnificPopup = $.magnificPopup.instance;
+					magnificPopup.content.find('.details__image .scroll').scrollbar({
+						onUpdate: function(){ 
+							magnificPopup.content.find('.details__image .scroll').css('max-height', magnificPopup.content.find('.details__text').outerHeight(true) );
+						}
+					});
+				}
+			}
+		}, $( '.details[data-item="' + $clicked.data('item') + '"]' ).index() );
+	});
+	
+	$('a[href="#small-dialog"]').magnificPopup({
+		type: 'inline',
+		closeBtnInside: true,
+		preloader: false,
+		midClick: true,
+		removalDelay: 300,
+		mainClass: 'my-mfp-zoom-in'
+	});
+
+	$('.form__input__budget').click(function(){
+		$('.form__input__budget').removeClass('form__input--radio--selected');
+		$(this).addClass('form__input--radio--selected');
+		var value = $(this).data('value');
+		$('input[value="'+ value +'"]').prop("checked", true);
+	});
+
+	$('.action--request').click(function(){
+		var valid = required( $('.form--request') );
+		$('.action--request').text('Processing...');
+		if ( valid == true ){
+			$.ajax({
+				url: "https://formspree.io/ben.rosati@live.com",
+				method: "POST",
+				data: { 
+					"name" : $('.form__input__name').val(),
+					"email" : $('.form__input__email').val(),
+					"skype"	: $('.form__input__skype').val(),
+					"budget" : $('input[name="budget"]:checked').val(),
+					"message" : $('.form__input__details').val(),
+					"referral"	: $('.form__input__referral').val()
+				},
+				dataType: "json",
+				success: function(data) { 
+					$('.form').slideUp();
+					$('.output').show();
+				}, 
+		        error: function(xhr, textStatus, errorThrown) { console.log(textStatus, errorThrown); }
+			});
+
+		} else { 
+			$('.action--request').text("Check fields and resubmit");
+		}
+	});
+	
+});
+</script> 
+
+</head>

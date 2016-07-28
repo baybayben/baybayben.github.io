@@ -1,0 +1,276 @@
+[[projects]]
+	'name' 		= 'Magic of Persia'
+	'file'		= 'mopcap'
+	'date'		= 2016
+	'role'		= 'Design, Development'
+	'excerpt'   = 'Submission and directory site showcasing contemporary Iranian artists.'
+	'url'		= 'http://mopcap.com/'
+	'tech'		= 'Wordpress, Contentful'
+	'text'		= """
+Magic of Persia is an inspiring art foundation that promotes and raises awareness of Iranian art and culture worldwide. Every 2 years they host what is known as the Contemporary Art Prize (MOPCAP) and sought to find a designer that could design and build a clean and minimal aesthetic with advanced content manageability so as to accept online contestant submissions.</p> <p>The project was a massive success and made the entire process for both contestants and judges incredible easy to complete! Check out the site to explore the phenomenal submissions and Iranian artist directory.
+"""
+
+[[projects]]
+	'name' 		= 'Open Path Wellness'
+	'file'		= 'mhe'
+	'date'		= 2016
+	'role'		= 'Design, Development'
+	'excerpt'   = 'Self guided online classes in the subject of wellness.'
+	'url'		= 'http://mentalhealth.openpathcollective.org/'
+	'tech'		= 'Wordpress, Contentful'
+	'text'		= """
+Open Path Psychotherapy Collective is a global network of
+mental health professionals dedicated to providing mental
+health care, at a steeply reduced rate, to families in need. Working
+collaboratively, we developed a site that organizes the valuable
+information the Collective offers in a way that clinicians and
+clients alike can easily navigate.
+
+A content-heavy site demands a purposeful and sustainable page
+hierarchy. Page layouts drive specific audiences to their target
+destinations and ultimately connect clinician with client.
+
+My partnership with Open Path has been an ongoing relationship
+anchored by mutual respect and shares responsibility. We’re
+currently working on our third major installment which will
+provide inexpensive educational courses for eligible individuals,
+and families. Working with Open Path continues to be a genuine
+experience as we develop meaningful ways to positively impact
+the future of mental health.
+"""
+
+[[projects]]
+	'name' 		= 'Board Game Geek'
+	'file'		= 'bgg'
+	'date'		= 2014
+	'role'		= 'Design'
+	'excerpt'   = 'Definitive database and community for boardgaming'
+	'url'		= 'https://boardgamegeek.com/'
+	'lead'		= 'Not just for geeks'
+	'text'		= """
+Board Game Geek is the definitive database for sharing, discussing, and discovering boardgames. The database holds reviews, articles, session reports, images, videos, and files for over 84,000 different games and expansions, and over 23,000 game designers. BoardGameGeek includes German-style board games, wargames, card games and other tabletop games, as well as public-domain card games like Spades. The site also features bulletin boards, a marketplace, several online boardgames, and a gamer database to help gamers find each other in the same location.
+
+My approach aspired to simplify the previous design of the Board Game Geek website. To create a landing page flow which catered to first time visitors, while balancing a member's page which aggregated content that they would find the most useful. 
+
+When presented to a select audience (i.e. /r/boardgames) the design was met equal with praise and criticism. The new flow appealed most to new visitors whom were finding it difficult to overcome the barrier of entry of the previous design. Veteran members though found it too organic and denounced the flow as not having enough functionality to compliment power-users.
+
+In the end, the design was shelved. The perspectives and opinions which the project generated were beneficial for the ongoing efforts to improve online board game communities. The project developed connections for my practice which were related to the field of boardgaming. I'm glad to of had the opportunity to present this new perspective.
+"""
+
+[[projects]]
+	'name' 		= 'Pro Theme Schema'
+	'file'		= 'pro'
+	'date'		= 2015
+	'role'		= 'Design'
+	'excerpt'   = 'Online wellness program for college campuses.'
+	'url'		= 'http://prothemesonline.com/'
+	'lead'		= 'Flexible content with class'
+	'text'		= """
+Pro Themes connected with me after recognizing my work
+on previous Wordpress projects. They sought a designer
+whom was familiar with the engine and had a clean visual style.
+We were able to quickly share moodboards and agree on an
+aesthetic direction which would become Schema.
+Schema is a powerful business theme that provides a fast way for
+companies or freelancers to create an awesome online presence.
+
+Schema brings plenty of customization possibilities like access to
+all Google Fonts, full color control, layout control, logo upload, full
+screen slider, header image, sticky navigation and much more.
+Also, Schema provides all the construction blocks you need to
+rapidly create an engaging front page.
+
+Schema is currently ranked within the top 100 free Wordpress
+themes on the Wordpress.org theme directory.
+"""
+
+[[projects]]
+	'name' 		= 'Happy Day Catering'
+	'file'		= 'happy'
+	'date'		= 2016
+	'role'		= 'Design'
+	'excerpt'   = 'Informational service site for premier catering company'
+	'text'		= """
+ More than just food, it’s full service experience. From your first call to clean-up, Happy Day Catering is here to help you every step of the way in making your event perfect. It all starts with a discussion with one of our even planners. We find out what you need and can help from everything from your menu to decor to valet.
+
+Happy Day Catering sought a designer whom could provide a fun atmosphere which didn't overwhelm visitors. Together we worked on creating styles, direction, and mockups until a theme clicked. Happy day catering was ecstatic to continue pushing forward with my service after having solidified our first design.
+
+The designs are currently being developed by an internal team at Happy Day Catering. 
+"""
+
+[[projects]]
+	'name'		= 'JuneStones'
+	'file'		= 'june'
+	'date'		= 2015
+	'role'		= 'Design, Development'
+	'excerpt'   = "Artist's site, ecommerce, and event listings."
+	'tech'		= 'Wordpress, Shopify'
+	'url'		= 'http://junestones.com/'
+	'text'		= """
+Ignite your highest vibration with a JuneStones wrap bracelet. JuneStones invites you to harness the metaphysical healing properties and dynamic beauty of gemstones from around the world. Each piece is lovingly handmade with beautiful natural leather and a signature JuneStones button to inspire, and to transform your energy, heart and mind.
+
+Our goal was to implement a cost efficient eccomerce solution which offered visitors a premium experience and June an easy way to manage product. After extensive research, the decision was laid forth to build the site using Wordpress and fetch product information via Shopify. Two content management systems don't seem ideal, but each platform offers the best experience for each facade of June's website.
+
+JuneStones has seen a steady rise in online transactions, and receives a lot less requests for support with her new website. Discover her bracelets and you might just find the treasured mana each bracelet invokes!
+"""
+
+[[projects]]
+	'name' 		= 'Hortigo'
+	'file'		= 'hortigo'
+	'date'		= 2015
+	'role'		= 'Design'
+	'excerpt'   = 'Service pairing client with landscape professionals.'
+	'collab'	= 'Alexander Mans'
+	'text'		= """
+If you are looking to recreate your landscape into something truly unique and amazing, then you need a landscape architect or designer. How do you find one? Not easily. Right now finding a landscape architect or designer requires the yellow pages or word of mouth. Both are nonspecific and unhelpful and leave you with the uncomfortable task of calling busy professionals who rarely take random phone calls.
+
+Enter Hortigo... Using our cloud-based marketplace platform we connect customers and professionals while facilitating easier business. Starting with how customers find and contact landscape professionals and continuing all the way through the design and construction phases, we are the link between the two.
+
+We facilitate ease of communication, payments, and contracts between professionals and customers. This streamlined approach provides customers with the landscape of their dreams; and professionals with increased customer acquisition and ease of payments.
+"""
+
+[[projects]]
+	'name' 		= 'Open Path Collective'
+	'file'		= 'oppc'
+	'date'		= 2016
+	'role'		= 'Design, Development'
+	'excerpt'   = 'Geolocation search directory to match client with therapist.'
+	'url'		= 'http://openpathcollective.org/'
+	'lead'		= 'Therapy within reach'
+	'text'		= """
+Open Path Psychotherapy Collective is a global network of
+mental health professionals dedicated to providing mental
+health care, at a steeply reduced rate, to families in need. Working
+collaboratively, we developed a site that organizes the valuable
+information the Collective offers in a way that clinicians and
+clients alike can easily navigate.
+
+A content-heavy site demands a purposeful and sustainable page
+hierarchy. Page layouts drive specific audiences to their target
+destinations and ultimately connect clinician with client.
+
+My partnership with Open Path has been an ongoing relationship
+anchored by mutual respect and shares responsibility. We’re
+currently working on our third major installment which will
+provide inexpensive educational courses for eligible individuals,
+and families. Working with Open Path continues to be a genuine
+experience as we develop meaningful ways to positively impact
+the future of mental health.
+"""
+
+[[projects]]
+	'name'		= 'Emergeast'
+	'file'		= 'ee'
+	'date'		= 2015
+	'role'		= 'Design, Development'
+	'excerpt'   = 'Contemporary gallery and ecommerce website.'
+	'url'		= 'http://emergeast.com/'
+	'text'		= """
+EMERGEAST is a premier influencer of Middle Eastern artists through succesful pop-up galleries, auctions, publications, and art walks; But their website made them look like a bargain-bin poster warehouse. Together we collaborated on developing a new digital presence which captures the unique, inspiring atmosphere which exposes the Middle East’s most talented artists in a rich, creative experience.
+
+I was approached by the EMERGEAST team near the end of 2015 to audit this current build. To say the least, it wasn't without faults. Most notable was that this was an eCommerce site without a checkout. Visitors needed to directly message the principles via a product form in order to request a purchase. 
+
+After extensive research, we decided the best solution was to build a custom platform which used Wordpress as a base foundation. Integrating several APIs, such as Stripe for checkout, and Shippo for packaging, the end product was incredible fluid for the Emergeast team to edit, add, and update their inventory.
+
+Explore Emergeast's current live site and and discover their inspiring collection of fine art. 
+"""
+
+[[projects]]
+	'name'	    = 'Skittles'
+	'file'		= 'skittles'
+	'date'		= 2014
+	'role'		= 'Development'
+	'excerpt'   = 'Fun, engaging stream of quips focused around social sharability.'
+	'url'		= 'http://skittles.com/'
+	'lead'		= 'Share The Rainbow'
+	'collab'	= 'Design Rangers, StellarEngine Consulting'
+	'tech'		= 'Tumblr, Tumblr API'
+	'text'      = """
+Building a site for *The Rainbow* was as fun as it was colorful. This project was in collaboration with Design Rangers and StellarEngine. Together we focused our talents and built a fun interactive experience that captured Skittle's global marketing.
+
+The site is personified through the eyes of The Rainbow, capturing The Rainbow's voice in a variety of shared gifs, pics, deep thoughts, and videos. It's best described as a Scrolling Celebration of Rebloggable Awesomeness.
+
+So how's it going? Well, Skittles is still the new rainbow on the block, but the average follower growth rate is 60% per month and monthly reblogs have increased by 91% since launch. To say the least, The Rainbow is gaining followers like a whale gains plankton if plankton were awesome; Maximum content impact with minimal rainbow resources!
+"""
+
+[[projects]]
+	'name' 		= 'Acts of Greatness'
+	'file'		= 'aog'
+	'date'		= 2014
+	'role'		= 'Development'
+	'excerpt'   = 'Engaging, inspirational information site for LGBTQ youth.'
+	'url'		= 'http://actsofgreatness.org/'
+	'text'		= """
+Yiorgos Boudouris began Acts of Greatness with a simple idea – he wanted to make a difference. His energy and passion radiated, and inspired a wonderful environment for us to collaboratively build an interactive platform which would be the basecamp for Acts of Greatness.</p> <p>With over 200 inspirational posts, 3 inititives, and many additional projects brewing, Acts of Greatness has become a moving force in the LGBTQ world.
+
+I'm so proud to of been able to develop a direction which truly captured the atmosphere of the inititive. Acts of Greatness continues to grow and encourages all of us to 'be who you were born to be'.
+"""
+[[projects]]
+	'name'		= 'Torn Banner'
+	'file'		= 'tornbanner'
+	'date'		= 2014
+	'role'		= 'Design, Development'
+	'excerpt'   = 'Studio site, product microsites, forum, and blogroll.'
+	'url'		= 'http://tornbanner.com/'
+	'tech'		= 'Wordpress, Vanilla Forums'
+	'text'		= """
+Sword swinging, axe chopping, mace pounding action! Torn Banner is the amazing independent game development studio behind Chivalry: Medieval Warfare. A long standing relationship, Torn Banner and I have been partnering for over 3 years.
+
+Each project, announcement, widget, or teaser that Torn Banner decides to take to the web is rendered using in-game assets and developed around the atmospheric voice that fans have come to love. The main website and it's several micro-sites is an epic journey that brings the user to the forefront of dev updates and game information.
+
+If you haven't yet, check out Chivalry on Steam and enjoy yourself some good ole fashioned medieval combat!
+"""
+
+[[projects]]
+	'name' 		= 'Eternity Hosting'
+	'file'		= 'eternity'
+	'date'		= 2014
+	'role'		= 'Design'
+	'excerpt'   = 'High fidelity product showcase and ecommerce website.'
+	'text'		= """
+Started by two passionate gamers, Eternity Hosting provides quality services for gamers to run their own independent servers. Packages are provided for trending games and new releases as they become available.
+
+The direction was to design an atmospheric site which projected a high fidelity gaming experience. This was a great opportunity to break the flat design trend and build a site that truly carried a personality and appealed to a gaming audience.
+"""
+
+[[projects]]
+	'name' 		= 'GameUp'
+	'date'		= 2015
+	'file'		= 'gameup'
+	'role'		= 'Design'
+	'excerpt'   = 'Software information and prouct showcase website.'
+	'text'		= """
+The tedious elements of game dev can wear out the most veteran of game programmers. GameUp recognized this trend and now provides a service which allows developers to easily integrate elements such as cloud storage, social login, and push notifications into their games.
+
+GameUp recognized my previous work in the gaming industry and sought my services for a design which reflected a tone which would appeal to a gamer-centric audience.
+
+Clean visuals and fun visual illustrations guide the user throughout GameUp's content and ultimately lead them to registration and technical documentation. GameUp’s registrations continue to grow and new features are being added periodically.
+"""
+
+[[projects]]
+	'name' 		= 'Veveo'
+	'date'		= 2015
+	'file'		= 'veveo'
+	'role'		= 'Design'
+	'excerpt'   = 'Software information and product showcase website.'
+	'text'		= """
+Organic automation, according to Veveo, will be the next major milestone for technology. Veveo's flagship software is an in-app conversational dialogue between user and machine which is developed to appear as though the user were conversing with a human.
+
+Veveo’s intentions to redesign their site were to appeal to the major tech corporations. The clean, minimal aesthetic was highlighted with colors that tied in with Veveo's logo. The page flow brought users from product to contact, depending on whether they were an investor or an interested hire.
+
+Shortly after we launched, Veveo merged with a larger tech company. I like to think the redesign influenced the decision.
+"""
+
+[[projects]]
+	'name' 		= 'Board Game Base'
+	'date'		= 2015
+	'file'		= 'bgb'
+	'role'		= 'Design'
+	'excerpt'   = 'Buyer-seller marketplace for trading boardgames.'
+	'text'		= """
+Collect, record, and share your board game life on a social platform geared specifically for tabletop enthusiasts. BoardGameBase sets out to make tabletop gaming more accessible for a general audience and improves upon the foundation and principles of Board Game Geek.
+
+BoardGameBase recognized my previous work in the gaming industry and sought my services for a design which reflected a tone which would appeal to a gamer-centric audience.
+
+Clean visuals and fun visual illustrations guide the user throughout BoardGameBase's content and ultimately lead them to account creation. BoardGameBase is set to launch in the upcoming months and boasts an extensive list of interested subscribers.
+"""
