@@ -6,6 +6,7 @@
 	'excerpt'   = 'Submission and directory site showcasing contemporary Iranian artists.'
 	'url'		= 'http://mopcap.com/'
 	'tech'		= 'Wordpress, Contentful'
+	'gallery'   = '<img src="/img/full/mopcap.jpg"><img src="/img/full/mopcap.jpg">'
 	'text'		= """
 Magic of Persia is an inspiring art foundation that promotes and raises awareness of Iranian art and culture worldwide. Every 2 years they host what is known as the Contemporary Art Prize (MOPCAP) and sought to find a designer that could design and build a clean and minimal aesthetic with advanced content manageability so as to accept online contestant submissions.</p> <p>The project was a massive success and made the entire process for both contestants and judges incredible easy to complete! Check out the site to explore the phenomenal submissions and Iranian artist directory.
 """
