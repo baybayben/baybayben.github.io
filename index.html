@@ -765,7 +765,7 @@ img.mfp-img {
  
 
 .mask { display: none; }
-.js body { opacity: 1; }
+.js body { opacity: 0; }
 .js .mask { display: inherit; }
 
  
@@ -879,12 +879,11 @@ jQuery(document).ready(function($) {
 	tl.from(".nav", 0.5, {height: 0}, '+=0.25');
 	tl.from(".nav__logo", 0.4, {height:0, opacity: 0}, '+=0.25');
 	tl.from(".nav__name", 0.5, {y:'-20', opacity:0});
-	tl.from(".nav__request, .nav__request--small", 0.5, {y:20, opacity:0}, "-=0.5");
+	tl.from(".nav__links", 0.5, {y:20, opacity:0}, "-=0.5");
 	tl.from(".intro", 0.5, {y:'-10', opacity: 0}, "+=0.25");
 	tl.from(".items h3", 0.5, {y:'-10', opacity: 0});
 	tl.staggerTo('.item', 0.5, {scale: 1, opacity: 1}, 0.1);
-	tl.from(".compendium h3", 0.5, {y:'-10', opacity: 0});
-	tl.from(".cta", 0.5, {y:'-10', opacity: 0}, "+=0.25");
+	tl.from(".services", 0.5, {y:'-10', opacity: 0});
 	tl.from(".boot", 0.25, {opacity:0});
 
 	
