@@ -82,13 +82,13 @@ button, input { -webkit-appearance: none; -moz-appearance: none; }
 h1, h2, h3, h4, h5, h6 { font-weight: 600; line-height: 1.2; }
 
 h1 {
-  font-size: 38px;
+  font-size: 30px;
   text-transform: uppercase;
-  margin: 0 0 15px 0; }
+  margin: 0 0 5px 0; }
 
 h2 {
-  font-size: 28px;
-  margin: 0 0 15px 0; }
+  font-size: 26px;
+  margin: 0 0 10px 0; }
 
 h3 { font-size: 34px; margin-bottom: 10px; }
 
@@ -255,7 +255,7 @@ textarea {
   display: inline-block;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 10px;
   padding: 16px 12px;
   border-radius: 0 0 3px 3px;
   z-index: 1; }
@@ -264,7 +264,7 @@ textarea {
   font-size: 28px;
   position: absolute;
   top: 13px;
-  left: 110px;
+  left: 120px;
   display: none;
   z-index: 1; }
 
@@ -311,7 +311,7 @@ textarea {
 .intro {
   max-width: 700px;
   text-align: center;
-  margin: 60px auto; }
+  margin: 30px auto 40px; }
 
 .intro a,
 .services a  {
@@ -327,9 +327,9 @@ textarea {
 .services a:hover { background-color: #ff3c3c; }
 
 .services {
-  max-width: 600px;
+  max-width: 620px;
   text-align: center;
-  margin: 60px auto; }
+  margin: 30px auto; }
 
 .item { margin: 0 0 15px 0; }
 
@@ -760,13 +760,7 @@ img.mfp-img {
   border-right: 10px solid rgba(255,255,255,1);
 }
 
- 
- 
- 
-
-.mask { display: none; }
-.js body { opacity: 0; }
-.js .mask { display: inherit; }
+.item img { min-width: 100%; }
 
  
  
@@ -779,32 +773,65 @@ img.mfp-img {
 }
 
 @media only screen and (min-width: 31.250em) {
+
+  .intro, .services { margin: 50px auto 60px; }
+
+
+
+
 }
 
 @media only screen and (min-width: 37.5em) {
+
   .square1 { display: block; }
+
+  .intro, .services { margin: 60px auto; }
+
+  h1 {
+    font-size: 38px;
+    margin: 0 0 15px 0; }
+
+  h2 {
+    font-size: 28px;
+    margin: 0 0 15px 0; }
+
+}
+
+@media only screen and (min-width: 40em) {
+  .items .item:nth-of-type(9){ display: none; }
 }
 
 @media only screen and (min-width: 50em) {
+
+  .nav__name { display: inline-block; }
+
   .details { margin: 40px; }
+
   .mfp-arrow-left {
     right: auto;
     left: 0;
   }
+
   .mfp-arrow { 
     top: 50%;
     right: 0;
     margin: -40px 0 0 0;
     padding: 50px 20px;
   }
+
 }
 
-@media only screen and (min-width: 62.5em) {
-  .nav__name { display: inline-block; }
+@media only screen and (min-width: 63.750em) {
+  
   .details__text__content { margin: 20px 0 100px; }
+  .items .item:nth-of-type(9){ display: block; }
+
 }
 
-@media only screen and (min-width: 67em) {
+@media only screen and (min-width: 65em) {
+
+  .nav__logo { left: 0; }
+  .nav__name { left: 110px; }
 
 }
 
@@ -870,21 +897,21 @@ function required(form){
 jQuery(document).ready(function($) {
 
 	
-	TweenMax.set('.item, .item span', {opacity: 0, scale: 0.8});
-
-	
-	var tl = new TimelineMax({delay: 0.5});
-	TweenMax.to(".square1", 3, {delay: 1, y:50, opacity:1});
-	tl.to("body", 0.5, {opacity: 1});
-	tl.from(".nav", 0.5, {height: 0}, '+=0.25');
-	tl.from(".nav__logo", 0.4, {height:0, opacity: 0}, '+=0.25');
-	tl.from(".nav__name", 0.5, {y:'-20', opacity:0});
-	tl.from(".nav__links", 0.5, {y:20, opacity:0}, "-=0.5");
-	tl.from(".intro", 0.5, {y:'-10', opacity: 0}, "+=0.25");
-	tl.from(".items h3", 0.5, {y:'-10', opacity: 0});
-	tl.staggerTo('.item', 0.5, {scale: 1, opacity: 1}, 0.1);
-	tl.from(".services", 0.5, {y:'-10', opacity: 0});
-	tl.from(".boot", 0.25, {opacity:0});
+	if( $(window).width() > 600 ){
+		TweenMax.set('.item, .item span', {opacity: 0, scale: 0.8});
+		var tl = new TimelineMax({delay: 0.5});
+		TweenMax.to(".square1", 3, {delay: 1, y:50, opacity:1});
+		tl.to("body", 0.5, {opacity: 1});
+		tl.from(".nav", 0.5, {height: 0}, '+=0.25');
+		tl.from(".nav__logo", 0.4, {height:0, opacity: 0}, '+=0.25');
+		tl.from(".nav__name", 0.5, {y:'-20', opacity:0});
+		tl.from(".nav__links", 0.5, {y:20, opacity:0}, "-=0.5");
+		tl.from(".intro", 0.5, {y:'-10', opacity: 0}, "+=0.25");
+		tl.from(".items h3", 0.5, {y:'-10', opacity: 0});
+		tl.staggerTo('.item', 0.5, {scale: 1, opacity: 1}, 0.1);
+		tl.from(".services", 0.5, {y:'-10', opacity: 0});
+		tl.from(".boot", 0.25, {opacity:0});
+	}
 
 	
 	$('.item a').hover(function(){
@@ -1122,17 +1149,21 @@ jQuery(document).ready(function($) {
 	</div>
 
 	<section class="services row">
-		<h2>Let's connect to discuss whether my past experiences can help you achieve similar success.</h2>
-		<p>The digital products which I've had the opportunity to work on have cultivated truly unique experiences for my ongoing practice. I'm happy to discuss your ideas and answer any questions regarding interactive marketing and website design. I'll be able to provide recommendations and an estimate after a short discussion.</p>
-		<p><a href='#small-dialog' class="action--form">Kickstart our conversation →</a></p>
+		<aside class="small-12 small-centered columns">
+			<h2>Let's connect to discuss whether my past experiences can help you achieve similar success.</h2>
+			<p>The digital products which I've had the opportunity to work on have cultivated truly unique experiences for my ongoing practice. I'm happy to discuss your ideas and answer any questions regarding interactive marketing and website design. I'll be able to provide recommendations and an estimate after a short discussion.</p>
+			<p><a href='#small-dialog' class="action--form">Kickstart our conversation →</a></p>
+		</aside>
 	</section>
 </main>
 
 <footer role="contentinfo" class="footer">
 	<div class="row">
-		<div class="footer__content">
-			<i>©</i> 2016 Benjamin Rosati. <a href="mailto:ben.rosati@live.com">ben.rosati@live.com</a>
-		</div>
+		<aside class="small-12 small-centered columns">
+			<div class="footer__content">
+				<i>©</i> 2016 Benjamin Rosati. <a href="mailto:ben.rosati@live.com">ben.rosati@live.com</a>
+			</div>
+		</aside>
 	</div>
 </footer>
 
@@ -1445,212 +1476,6 @@ the future of mental health.</div>
 				</aside>
 			</section>
 	
-		<section id="dialog-skittles" class="row details" data-item="skittles">
-				<aside class="small-12 large-4 columns details__text">
-					<div class="scroll">
-						<div class="details__text__lead">
-							
-								Share The Rainbow
-							
-						</div>
-						<div class="details__text__details">
-							 <span><i>URL:</i> <a href="http://skittles.com/">http://skittles.com/</a> </span> 
-							 <span><i>Role:</i> Development </span> 
-							 <span><i>Technology:</i> Tumblr, Tumblr API </span> 
-							 <span><i>Collaborators:</i> Design Rangers, StellarEngine Consulting </span> 
-						</div>
-						
-							<div class="details__text__content">Building a site for <em>The Rainbow</em> was as fun as it was colorful. This project was in collaboration with Design Rangers and StellarEngine. Together we focused our talents and built a fun interactive experience that captured Skittle&rsquo;s global marketing.</p>
-
-<p>The site is personified through the eyes of The Rainbow, capturing The Rainbow&rsquo;s voice in a variety of shared gifs, pics, deep thoughts, and videos. It&rsquo;s best described as a Scrolling Celebration of Rebloggable Awesomeness.</p>
-
-<p>So how&rsquo;s it going? Well, Skittles is still the new rainbow on the block, but the average follower growth rate is 60% per month and monthly reblogs have increased by 91% since launch. To say the least, The Rainbow is gaining followers like a whale gains plankton if plankton were awesome; Maximum content impact with minimal rainbow resources!</div>
-						
-					</div>
-				</aside>
-				<aside class="small-12 large-8 columns details__image">
-					<div class="scroll">
-						<img src="/img/full/skittles.jpg" />
-					</div>
-				</aside>
-			</section>
-	
-		<section id="dialog-aog" class="row details" data-item="aog">
-				<aside class="small-12 large-4 columns details__text">
-					<div class="scroll">
-						<div class="details__text__lead">
-							
-								Acts of Greatness
-							
-						</div>
-						<div class="details__text__details">
-							 <span><i>URL:</i> <a href="http://actsofgreatness.org/">http://actsofgreatness.org/</a> </span> 
-							 <span><i>Role:</i> Development </span> 
-							
-							
-						</div>
-						
-							<div class="details__text__content">Yiorgos Boudouris began Acts of Greatness with a simple idea – he wanted to make a difference. His energy and passion radiated, and inspired a wonderful environment for us to collaboratively build an interactive platform which would be the basecamp for Acts of Greatness.</p> <p>With over 200 inspirational posts, 3 inititives, and many additional projects brewing, Acts of Greatness has become a moving force in the LGBTQ world.</p>
-
-<p>I&rsquo;m so proud to of been able to develop a direction which truly captured the atmosphere of the inititive. Acts of Greatness continues to grow and encourages all of us to &lsquo;be who you were born to be&rsquo;.</div>
-						
-					</div>
-				</aside>
-				<aside class="small-12 large-8 columns details__image">
-					<div class="scroll">
-						<img src="/img/full/aog.jpg" />
-					</div>
-				</aside>
-			</section>
-	
-		<section id="dialog-tornbanner" class="row details" data-item="tornbanner">
-				<aside class="small-12 large-4 columns details__text">
-					<div class="scroll">
-						<div class="details__text__lead">
-							
-								Torn Banner
-							
-						</div>
-						<div class="details__text__details">
-							 <span><i>URL:</i> <a href="http://tornbanner.com/">http://tornbanner.com/</a> </span> 
-							 <span><i>Role:</i> Design, Development </span> 
-							 <span><i>Technology:</i> Wordpress, Vanilla Forums </span> 
-							
-						</div>
-						
-							<div class="details__text__content">Sword swinging, axe chopping, mace pounding action! Torn Banner is the amazing independent game development studio behind Chivalry: Medieval Warfare. A long standing relationship, Torn Banner and I have been partnering for over 3 years.</p>
-
-<p>Each project, announcement, widget, or teaser that Torn Banner decides to take to the web is rendered using in-game assets and developed around the atmospheric voice that fans have come to love. The main website and it&rsquo;s several micro-sites is an epic journey that brings the user to the forefront of dev updates and game information.</p>
-
-<p>If you haven&rsquo;t yet, check out Chivalry on Steam and enjoy yourself some good ole fashioned medieval combat!</div>
-						
-					</div>
-				</aside>
-				<aside class="small-12 large-8 columns details__image">
-					<div class="scroll">
-						<img src="/img/full/tornbanner.jpg" />
-					</div>
-				</aside>
-			</section>
-	
-		<section id="dialog-eternity" class="row details" data-item="eternity">
-				<aside class="small-12 large-4 columns details__text">
-					<div class="scroll">
-						<div class="details__text__lead">
-							
-								Eternity Hosting
-							
-						</div>
-						<div class="details__text__details">
-							
-							 <span><i>Role:</i> Design </span> 
-							
-							
-						</div>
-						
-							<div class="details__text__content">Started by two passionate gamers, Eternity Hosting provides quality services for gamers to run their own independent servers. Packages are provided for trending games and new releases as they become available.</p>
-
-<p>The direction was to design an atmospheric site which projected a high fidelity gaming experience. This was a great opportunity to break the flat design trend and build a site that truly carried a personality and appealed to a gaming audience.</div>
-						
-					</div>
-				</aside>
-				<aside class="small-12 large-8 columns details__image">
-					<div class="scroll">
-						<img src="/img/full/eternity.jpg" />
-					</div>
-				</aside>
-			</section>
-	
-		<section id="dialog-gameup" class="row details" data-item="gameup">
-				<aside class="small-12 large-4 columns details__text">
-					<div class="scroll">
-						<div class="details__text__lead">
-							
-								GameUp
-							
-						</div>
-						<div class="details__text__details">
-							
-							 <span><i>Role:</i> Design </span> 
-							
-							
-						</div>
-						
-							<div class="details__text__content">The tedious elements of game dev can wear out the most veteran of game programmers. GameUp recognized this trend and now provides a service which allows developers to easily integrate elements such as cloud storage, social login, and push notifications into their games.</p>
-
-<p>GameUp recognized my previous work in the gaming industry and sought my services for a design which reflected a tone which would appeal to a gamer-centric audience.</p>
-
-<p>Clean visuals and fun visual illustrations guide the user throughout GameUp&rsquo;s content and ultimately lead them to registration and technical documentation. GameUp’s registrations continue to grow and new features are being added periodically.</div>
-						
-					</div>
-				</aside>
-				<aside class="small-12 large-8 columns details__image">
-					<div class="scroll">
-						<img src="/img/full/gameup.jpg" />
-					</div>
-				</aside>
-			</section>
-	
-		<section id="dialog-veveo" class="row details" data-item="veveo">
-				<aside class="small-12 large-4 columns details__text">
-					<div class="scroll">
-						<div class="details__text__lead">
-							
-								Veveo
-							
-						</div>
-						<div class="details__text__details">
-							
-							 <span><i>Role:</i> Design </span> 
-							
-							
-						</div>
-						
-							<div class="details__text__content">Organic automation, according to Veveo, will be the next major milestone for technology. Veveo&rsquo;s flagship software is an in-app conversational dialogue between user and machine which is developed to appear as though the user were conversing with a human.</p>
-
-<p>Veveo’s intentions to redesign their site were to appeal to the major tech corporations. The clean, minimal aesthetic was highlighted with colors that tied in with Veveo&rsquo;s logo. The page flow brought users from product to contact, depending on whether they were an investor or an interested hire.</p>
-
-<p>Shortly after we launched, Veveo merged with a larger tech company. I like to think the redesign influenced the decision.</div>
-						
-					</div>
-				</aside>
-				<aside class="small-12 large-8 columns details__image">
-					<div class="scroll">
-						<img src="/img/full/veveo.jpg" />
-					</div>
-				</aside>
-			</section>
-	
-		<section id="dialog-bgb" class="row details" data-item="bgb">
-				<aside class="small-12 large-4 columns details__text">
-					<div class="scroll">
-						<div class="details__text__lead">
-							
-								Board Game Base
-							
-						</div>
-						<div class="details__text__details">
-							
-							 <span><i>Role:</i> Design </span> 
-							
-							
-						</div>
-						
-							<div class="details__text__content">Collect, record, and share your board game life on a social platform geared specifically for tabletop enthusiasts. BoardGameBase sets out to make tabletop gaming more accessible for a general audience and improves upon the foundation and principles of Board Game Geek.</p>
-
-<p>BoardGameBase recognized my previous work in the gaming industry and sought my services for a design which reflected a tone which would appeal to a gamer-centric audience.</p>
-
-<p>Clean visuals and fun visual illustrations guide the user throughout BoardGameBase&rsquo;s content and ultimately lead them to account creation. BoardGameBase is set to launch in the upcoming months and boasts an extensive list of interested subscribers.</div>
-						
-					</div>
-				</aside>
-				<aside class="small-12 large-8 columns details__image">
-					<div class="scroll">
-						<img src="/img/full/bgb.jpg" />
-					</div>
-				</aside>
-			</section>
-	
 </div>
 
 <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
@@ -1693,7 +1518,7 @@ the future of mental health.</div>
 		<div class="output__newsletter">
 			<div class="output__newsletter__img"></div>
 			<h2>Thank you!</h2>
-			<p>Your message is now traversing its way to my inbox. Please be patient, as current client work always comes first. I endeavor to respond to new requests within 48 hours. I'm looking forward to connecting soon!</p>
+			<p>Your message is now traversing its way to my inbox. Please be patient, as current client work always comes first. I'm looking forward to connecting soon!</p>
 		</div>
 	</div>
 </div>

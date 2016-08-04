@@ -76,13 +76,13 @@ button, input { -webkit-appearance: none; -moz-appearance: none; }
 h1, h2, h3, h4, h5, h6 { font-weight: 600; line-height: 1.2; }
 
 h1 {
-  font-size: 38px;
+  font-size: 30px;
   text-transform: uppercase;
-  margin: 0 0 15px 0; }
+  margin: 0 0 5px 0; }
 
 h2 {
-  font-size: 28px;
-  margin: 0 0 15px 0; }
+  font-size: 26px;
+  margin: 0 0 10px 0; }
 
 h3 { font-size: 34px; margin-bottom: 10px; }
 
@@ -249,7 +249,7 @@ textarea {
   display: inline-block;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 10px;
   padding: 16px 12px;
   border-radius: 0 0 3px 3px;
   z-index: 1; }
@@ -258,7 +258,7 @@ textarea {
   font-size: 28px;
   position: absolute;
   top: 13px;
-  left: 110px;
+  left: 120px;
   display: none;
   z-index: 1; }
 
@@ -305,7 +305,7 @@ textarea {
 .intro {
   max-width: 700px;
   text-align: center;
-  margin: 60px auto; }
+  margin: 30px auto 40px; }
 
 .intro a,
 .services a  {
@@ -321,9 +321,9 @@ textarea {
 .services a:hover { background-color: #ff3c3c; }
 
 .services {
-  max-width: 600px;
+  max-width: 620px;
   text-align: center;
-  margin: 60px auto; }
+  margin: 30px auto; }
 
 .item { margin: 0 0 15px 0; }
 
@@ -754,13 +754,7 @@ img.mfp-img {
   border-right: 10px solid rgba(255,255,255,1);
 }
 
-/* -----------------------------------------------------------------------------*/
-/* /// MODERNZER                                                                */
-/* -----------------------------------------------------------------------------*/
-
-.mask { display: none; }
-.js body { opacity: 1; }
-.js .mask { display: inherit; }
+.item img { min-width: 100%; }
 
 /* -----------------------------------------------------------------------------*/
 /* /// RESPONSIVE                                                               */
@@ -779,32 +773,65 @@ img.mfp-img {
 }
 
 @media only screen and (min-width: 31.250em) {
+
+  .intro, .services { margin: 50px auto 60px; }
+
+
+
+
 }
 
 @media only screen and (min-width: 37.5em) {
+
   .square1 { display: block; }
+
+  .intro, .services { margin: 60px auto; }
+
+  h1 {
+    font-size: 38px;
+    margin: 0 0 15px 0; }
+
+  h2 {
+    font-size: 28px;
+    margin: 0 0 15px 0; }
+
+}
+
+@media only screen and (min-width: 40em) {
+  .items .item:nth-of-type(9){ display: none; }
 }
 
 @media only screen and (min-width: 50em) {
+
+  .nav__name { display: inline-block; }
+
   .details { margin: 40px; }
+
   .mfp-arrow-left {
     right: auto;
     left: 0;
   }
+
   .mfp-arrow { 
     top: 50%;
     right: 0;
     margin: -40px 0 0 0;
     padding: 50px 20px;
   }
+
 }
 
-@media only screen and (min-width: 62.5em) {
-  .nav__name { display: inline-block; }
+@media only screen and (min-width: 63.750em) {
+  
   .details__text__content { margin: 20px 0 100px; }
+  .items .item:nth-of-type(9){ display: block; }
+
 }
 
-@media only screen and (min-width: 67em) {
+@media only screen and (min-width: 65em) {
+
+  .nav__logo { left: 0; }
+  .nav__name { left: 110px; }
 
 }
 

@@ -45,22 +45,26 @@
 	</div>
 
 	<section class="services row">
-		<h2>Let's connect to discuss whether my past experiences can help you achieve similar success.</h2>
-		<p>The digital products which I've had the opportunity to work on have cultivated truly unique experiences for my ongoing practice. I'm happy to discuss your ideas and answer any questions regarding interactive marketing and website design. I'll be able to provide recommendations and an estimate after a short discussion.</p>
-		<p><a href='#small-dialog' class="action--form">Kickstart our conversation →</a></p>
+		<aside class="small-12 small-centered columns">
+			<h2>Let's connect to discuss whether my past experiences can help you achieve similar success.</h2>
+			<p>The digital products which I've had the opportunity to work on have cultivated truly unique experiences for my ongoing practice. I'm happy to discuss your ideas and answer any questions regarding interactive marketing and website design. I'll be able to provide recommendations and an estimate after a short discussion.</p>
+			<p><a href='#small-dialog' class="action--form">Kickstart our conversation →</a></p>
+		</aside>
 	</section>
 </main>
 
 <footer role="contentinfo" class="footer">
 	<div class="row">
-		<div class="footer__content">
-			<i>©</i> 2016 Benjamin Rosati. <a href="mailto:ben.rosati@live.com">ben.rosati@live.com</a>
-		</div>
+		<aside class="small-12 small-centered columns">
+			<div class="footer__content">
+				<i>©</i> 2016 Benjamin Rosati. <a href="mailto:ben.rosati@live.com">ben.rosati@live.com</a>
+			</div>
+		</aside>
 	</div>
 </footer>
 
 <div id="details" class="mfp-hide zoom-anim-dialog">
-	{{ range .Site.Data.projects.projects }}
+	{{ range first 9 .Site.Data.projects.projects }}
 		<section id="dialog-{{ .file }}" class="row details" data-item="{{ .file }}">
 				<aside class="small-12 large-4 columns details__text">
 					<div class="scroll">
@@ -131,7 +135,7 @@
 		<div class="output__newsletter">
 			<div class="output__newsletter__img"></div>
 			<h2>Thank you!</h2>
-			<p>Your message is now traversing its way to my inbox. Please be patient, as current client work always comes first. I endeavor to respond to new requests within 48 hours. I'm looking forward to connecting soon!</p>
+			<p>Your message is now traversing its way to my inbox. Please be patient, as current client work always comes first. I'm looking forward to connecting soon!</p>
 		</div>
 	</div>
 </div>

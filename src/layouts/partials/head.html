@@ -40,23 +40,22 @@ function required(form){
 
 jQuery(document).ready(function($) {
 
-	//Prep
-	TweenMax.set('.item, .item span', {opacity: 0, scale: 0.8});
-
 	// //Animate
-	var tl = new TimelineMax({delay: 0.5});
-	TweenMax.to(".square1", 3, {delay: 1, y:50, opacity:1});
-	tl.to("body", 0.5, {opacity: 1});
-	tl.from(".nav", 0.5, {height: 0}, '+=0.25');
-	tl.from(".nav__logo", 0.4, {height:0, opacity: 0}, '+=0.25');
-	tl.from(".nav__name", 0.5, {y:'-20', opacity:0});
-	tl.from(".nav__request, .nav__request--small", 0.5, {y:20, opacity:0}, "-=0.5");
-	tl.from(".intro", 0.5, {y:'-10', opacity: 0}, "+=0.25");
-	tl.from(".items h3", 0.5, {y:'-10', opacity: 0});
-	tl.staggerTo('.item', 0.5, {scale: 1, opacity: 1}, 0.1);
-	tl.from(".compendium h3", 0.5, {y:'-10', opacity: 0});
-	tl.from(".cta", 0.5, {y:'-10', opacity: 0}, "+=0.25");
-	tl.from(".boot", 0.25, {opacity:0});
+	if( $(window).width() > 600 ){
+		TweenMax.set('.item, .item span', {opacity: 0, scale: 0.8});
+		var tl = new TimelineMax({delay: 0.5});
+		TweenMax.to(".square1", 3, {delay: 1, y:50, opacity:1});
+		tl.to("body", 0.5, {opacity: 1});
+		tl.from(".nav", 0.5, {height: 0}, '+=0.25');
+		tl.from(".nav__logo", 0.4, {height:0, opacity: 0}, '+=0.25');
+		tl.from(".nav__name", 0.5, {y:'-20', opacity:0});
+		tl.from(".nav__links", 0.5, {y:20, opacity:0}, "-=0.5");
+		tl.from(".intro", 0.5, {y:'-10', opacity: 0}, "+=0.25");
+		tl.from(".items h3", 0.5, {y:'-10', opacity: 0});
+		tl.staggerTo('.item', 0.5, {scale: 1, opacity: 1}, 0.1);
+		tl.from(".services", 0.5, {y:'-10', opacity: 0});
+		tl.from(".boot", 0.25, {opacity:0});
+	}
 
 	//Portfolio Hover
 	$('.item a').hover(function(){
