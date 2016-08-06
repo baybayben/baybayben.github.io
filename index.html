@@ -946,8 +946,12 @@ jQuery(document).ready(function($) {
 			closeBtnInside: false,
 			removalDelay: 300,
 			mainClass: 'my-mfp-zoom-in',
+			fixedContentPos: false,
+			fixedBgPos: true,
+			closeMarkup: '<button title="%title%" type="button" class="mfp-close zoom-anim-dialog">&#215;</button>',
 			gallery: {
-				enabled: true
+				enabled: true,
+				arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir% zoom-anim-dialog"></button>',
 			},
 		}, $( '.details[data-item="' + $clicked.data('item') + '"]' ).index() );
 	});
@@ -955,11 +959,14 @@ jQuery(document).ready(function($) {
 	
 	$('a[href="#small-dialog"]').magnificPopup({
 		type: 'inline',
-		closeBtnInside: true,
+		closeBtnInside: false,
 		preloader: false,
 		midClick: true,
 		removalDelay: 300,
-		mainClass: 'my-mfp-zoom-in'
+		fixedContentPos: false,
+		fixedBgPos: true,
+		mainClass: 'my-mfp-zoom-in',
+		closeMarkup: '<button title="%title%" type="button" class="mfp-close zoom-anim-dialog">&#215;</button>'
 	});
 
 	
@@ -1167,9 +1174,9 @@ jQuery(document).ready(function($) {
 	</div>
 </footer>
 
-<div id="details" class="mfp-hide zoom-anim-dialog">
+<div id="details" class="mfp-hide">
 	
-		<section id="dialog-mopcap" class="row details" data-item="mopcap">
+		<section id="dialog-mopcap" class="row details zoom-anim-dialog" data-item="mopcap">
 				<aside class="small-12 large-4 columns details__text">
 					<div class="scroll">
 						<div class="details__text__lead">
@@ -1195,7 +1202,7 @@ jQuery(document).ready(function($) {
 				</aside>
 			</section>
 	
-		<section id="dialog-mhe" class="row details" data-item="mhe">
+		<section id="dialog-mhe" class="row details zoom-anim-dialog" data-item="mhe">
 				<aside class="small-12 large-4 columns details__text">
 					<div class="scroll">
 						<div class="details__text__lead">
@@ -1238,7 +1245,7 @@ the future of mental health.</div>
 				</aside>
 			</section>
 	
-		<section id="dialog-bgg" class="row details" data-item="bgg">
+		<section id="dialog-bgg" class="row details zoom-anim-dialog" data-item="bgg">
 				<aside class="small-12 large-4 columns details__text">
 					<div class="scroll">
 						<div class="details__text__lead">
@@ -1270,7 +1277,7 @@ the future of mental health.</div>
 				</aside>
 			</section>
 	
-		<section id="dialog-pro" class="row details" data-item="pro">
+		<section id="dialog-pro" class="row details zoom-anim-dialog" data-item="pro">
 				<aside class="small-12 large-4 columns details__text">
 					<div class="scroll">
 						<div class="details__text__lead">
@@ -1311,7 +1318,7 @@ themes on the Wordpress.org theme directory.</div>
 				</aside>
 			</section>
 	
-		<section id="dialog-happy" class="row details" data-item="happy">
+		<section id="dialog-happy" class="row details zoom-anim-dialog" data-item="happy">
 				<aside class="small-12 large-4 columns details__text">
 					<div class="scroll">
 						<div class="details__text__lead">
@@ -1341,7 +1348,7 @@ themes on the Wordpress.org theme directory.</div>
 				</aside>
 			</section>
 	
-		<section id="dialog-june" class="row details" data-item="june">
+		<section id="dialog-june" class="row details zoom-anim-dialog" data-item="june">
 				<aside class="small-12 large-4 columns details__text">
 					<div class="scroll">
 						<div class="details__text__lead">
@@ -1371,7 +1378,7 @@ themes on the Wordpress.org theme directory.</div>
 				</aside>
 			</section>
 	
-		<section id="dialog-hortigo" class="row details" data-item="hortigo">
+		<section id="dialog-hortigo" class="row details zoom-anim-dialog" data-item="hortigo">
 				<aside class="small-12 large-4 columns details__text">
 					<div class="scroll">
 						<div class="details__text__lead">
@@ -1401,7 +1408,7 @@ themes on the Wordpress.org theme directory.</div>
 				</aside>
 			</section>
 	
-		<section id="dialog-oppc" class="row details" data-item="oppc">
+		<section id="dialog-oppc" class="row details zoom-anim-dialog" data-item="oppc">
 				<aside class="small-12 large-4 columns details__text">
 					<div class="scroll">
 						<div class="details__text__lead">
@@ -1444,7 +1451,7 @@ the future of mental health.</div>
 				</aside>
 			</section>
 	
-		<section id="dialog-ee" class="row details" data-item="ee">
+		<section id="dialog-ee" class="row details zoom-anim-dialog" data-item="ee">
 				<aside class="small-12 large-4 columns details__text">
 					<div class="scroll">
 						<div class="details__text__lead">

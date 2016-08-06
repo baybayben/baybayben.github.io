@@ -90,8 +90,12 @@ jQuery(document).ready(function($) {
 			closeBtnInside: false,
 			removalDelay: 300,
 			mainClass: 'my-mfp-zoom-in',
+			fixedContentPos: false,
+			fixedBgPos: true,
+			closeMarkup: '<button title="%title%" type="button" class="mfp-close zoom-anim-dialog">&#215;</button>',
 			gallery: {
-				enabled: true
+				enabled: true,
+				arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir% zoom-anim-dialog"></button>',
 			},
 		}, $( '.details[data-item="' + $clicked.data('item') + '"]' ).index() );
 	});
@@ -99,11 +103,14 @@ jQuery(document).ready(function($) {
 	//Contact Form
 	$('a[href="#small-dialog"]').magnificPopup({
 		type: 'inline',
-		closeBtnInside: true,
+		closeBtnInside: false,
 		preloader: false,
 		midClick: true,
 		removalDelay: 300,
-		mainClass: 'my-mfp-zoom-in'
+		fixedContentPos: false,
+		fixedBgPos: true,
+		mainClass: 'my-mfp-zoom-in',
+		closeMarkup: '<button title="%title%" type="button" class="mfp-close zoom-anim-dialog">&#215;</button>'
 	});
 
 	//Contact Form: Buttons

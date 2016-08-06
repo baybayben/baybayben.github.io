@@ -63,9 +63,9 @@
 	</div>
 </footer>
 
-<div id="details" class="mfp-hide zoom-anim-dialog">
+<div id="details" class="mfp-hide">
 	{{ range first 9 .Site.Data.projects.projects }}
-		<section id="dialog-{{ .file }}" class="row details" data-item="{{ .file }}">
+		<section id="dialog-{{ .file }}" class="row details zoom-anim-dialog" data-item="{{ .file }}">
 				<aside class="small-12 large-4 columns details__text">
 					<div class="scroll">
 						<div class="details__text__lead">
