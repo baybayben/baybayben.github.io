@@ -8,7 +8,10 @@
 	'tech'		= 'Wordpress, Contentful'
 	'gallery'   = '<img src="/img/full/mopcap.jpg"><img src="/img/full/mopcap.jpg">'
 	'text'		= """
-Magic of Persia is an inspiring art foundation that promotes and raises awareness of Iranian art and culture worldwide. Every 2 years they host what is known as the Contemporary Art Prize (MOPCAP) and sought to find a designer that could design and build a clean and minimal aesthetic with advanced content manageability so as to accept online contestant submissions.</p> <p>The project was a massive success and made the entire process for both contestants and judges incredible easy to complete! Check out the site to explore the phenomenal submissions and Iranian artist directory.
+Magic of Persia is an inspiring art foundation that promotes and raises awareness of Iranian art and culture worldwide. Every 2 years Magic of Persia hosts an open call for submissions for their primary programme, Magic of Persia Contemporary Art Prize (MOPCAP). Magic of Persia sought a designer that could design and develop a minimal aesthetic website with application functionality for artist's to submit artwork.
+
+<a href="https://www.behance.net/gallery/42239919/Magic-of-Persia" target="_blank">Read Case Study on Behance →</a>
+
 """
 
 [[projects]]

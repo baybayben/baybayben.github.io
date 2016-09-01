@@ -47,7 +47,7 @@ jQuery(document).ready(function($) {
 		TweenMax.to(".square1", 3, {delay: 1, y:50, opacity:1});
 		tl.to("body", 0.5, {opacity: 1});
 		tl.from(".nav", 0.5, {height: 0}, '+=0.25');
-		tl.from(".nav__logo", 0.4, {height:0, opacity: 0}, '+=0.25');
+		tl.from(".nav__logo", 0.4, {y: -90, opacity: 0}, '+=0.25');
 		tl.from(".nav__name", 0.5, {y:'-20', opacity:0});
 		tl.from(".nav__links", 0.5, {y:20, opacity:0}, "-=0.5");
 		tl.from(".intro", 0.5, {y:'-10', opacity: 0}, "+=0.25");
@@ -92,6 +92,7 @@ jQuery(document).ready(function($) {
 			mainClass: 'my-mfp-zoom-in',
 			fixedContentPos: false,
 			fixedBgPos: true,
+			alignTop: true,
 			closeMarkup: '<button title="%title%" type="button" class="mfp-close zoom-anim-dialog">&#215;</button>',
 			gallery: {
 				enabled: true,
@@ -109,6 +110,7 @@ jQuery(document).ready(function($) {
 		removalDelay: 300,
 		fixedContentPos: false,
 		fixedBgPos: true,
+		alignTop: true,
 		mainClass: 'my-mfp-zoom-in',
 		closeMarkup: '<button title="%title%" type="button" class="mfp-close zoom-anim-dialog">&#215;</button>'
 	});
