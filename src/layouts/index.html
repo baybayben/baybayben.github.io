@@ -66,32 +66,22 @@
 <div id="details" class="mfp-hide">
 	{{ range first 9 .Site.Data.projects.projects }}
 		<section id="dialog-{{ .file }}" class="row details zoom-anim-dialog" data-item="{{ .file }}">
-				<aside class="small-12 large-4 columns details__text">
-					<div class="scroll">
-						<div class="details__text__lead">
-							{{ if .lead }}
-								{{ .lead }}
-							{{ else }}
-								{{ .name }}
-							{{ end }}
-						</div>
-						<div class="details__text__details">
-							{{ if .url }} <span><i>URL:</i> <a href="{{ .url }}">{{ .url }}</a> </span> {{ end }}
-							{{ if .role }} <span><i>Role:</i> {{ .role }} </span> {{ end }}
-							{{ if .tech }} <span><i>Technology:</i> {{ .tech }} </span> {{ end }}
-							{{ if .collab }} <span><i>Collaborators:</i> {{ .collab }} </span> {{ end }}
-						</div>
-						{{ if .text }}
-							<div class="details__text__content">{{ .text | markdownify }}</div>
-						{{ end }}
-					</div>
-				</aside>
-				<aside class="small-12 large-8 columns details__image">
-					<div class="scroll">
-						<img src="/img/full/{{ .file }}.jpg" />
-					</div>
-				</aside>
-			</section>
+
+				<div class="details__lead">
+					{{ .name }}
+					<ul>
+						{{ if .url }}<li><span><i>URL:</i> <a href="{{ .url }}">{{ .url }}</a> </span> {{ end }}
+						{{ if .role }}<li><span><i>Role:</i> {{ .role }} </span> {{ end }}
+						{{ if .tech }}<li><span><i>Technology:</i> {{ .tech }} </span> {{ end }}
+						{{ if .collab }}<li><span><i>Collaborators:</i> {{ .collab }} </span> {{ end }}
+					</ul>
+				</div>
+
+				{{ if .text }}
+					<div class="details__content">{{ .text | markdownify }} <p><img src="/img/full/fleuron.jpg" style="width: 50px; margin: 20px 0 0; opacity: 0.25;"></p></div>
+				{{ end }}
+
+		</section>
 	{{ end }}
 </div>
 

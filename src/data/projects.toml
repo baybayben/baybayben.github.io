@@ -6,11 +6,18 @@
 	'excerpt'   = 'Submission and directory site showcasing contemporary Iranian artists.'
 	'url'		= 'http://mopcap.com/'
 	'tech'		= 'Wordpress, Contentful'
-	'gallery'   = '<img src="/img/full/mopcap.jpg"><img src="/img/full/mopcap.jpg">'
 	'text'		= """
+<img src="/img/full/mopcap-hero.jpg">
+
 Magic of Persia is an inspiring art foundation that promotes and raises awareness of Iranian art and culture worldwide. Every 2 years Magic of Persia hosts an open call for submissions for their primary programme, Magic of Persia Contemporary Art Prize (MOPCAP). Magic of Persia sought a designer that could design and develop a minimal aesthetic website with application functionality for artist's to submit artwork.
 
-<a href="https://www.behance.net/gallery/42239919/Magic-of-Persia" target="_blank">Read Case Study on Behance →</a>
+---  
+
+<img src="/img/full/mopcap-1.jpg">  
+
+<img src="/img/full/mopcap-2.jpg">  
+
+<img src="/img/full/mopcap-3.jpg"> 
 
 """
 
@@ -23,6 +30,8 @@ Magic of Persia is an inspiring art foundation that promotes and raises awarenes
 	'url'		= 'http://mentalhealth.openpathcollective.org/'
 	'tech'		= 'Wordpress, Contentful'
 	'text'		= """
+<img src="/img/full/mhe-hero.jpg">  
+
 Open Path Psychotherapy Collective is a global network of
 mental health professionals dedicated to providing mental
 health care, at a steeply reduced rate, to families in need. Working
@@ -30,35 +39,32 @@ collaboratively, we developed a site that organizes the valuable
 information the Collective offers in a way that clinicians and
 clients alike can easily navigate.
 
-A content-heavy site demands a purposeful and sustainable page
-hierarchy. Page layouts drive specific audiences to their target
-destinations and ultimately connect clinician with client.
+---  
 
-My partnership with Open Path has been an ongoing relationship
-anchored by mutual respect and shares responsibility. We’re
-currently working on our third major installment which will
-provide inexpensive educational courses for eligible individuals,
-and families. Working with Open Path continues to be a genuine
-experience as we develop meaningful ways to positively impact
-the future of mental health.
+<img src="/img/full/mhe-1.jpg">  
+
+<img src="/img/full/mhe-2.jpg">  
+
+<img src="/img/full/mhe-3.jpg"> 
+
 """
 
 [[projects]]
 	'name' 		= 'Board Game Geek'
 	'file'		= 'bgg'
 	'date'		= 2014
-	'role'		= 'Design'
+	'role'		= 'Conceptual Design'
 	'excerpt'   = 'Definitive database and community for boardgaming'
 	'url'		= 'https://boardgamegeek.com/'
-	'lead'		= 'Not just for geeks'
 	'text'		= """
-Board Game Geek is the definitive database for sharing, discussing, and discovering boardgames. The database holds reviews, articles, session reports, images, videos, and files for over 84,000 different games and expansions, and over 23,000 game designers. BoardGameGeek includes German-style board games, wargames, card games and other tabletop games, as well as public-domain card games like Spades. The site also features bulletin boards, a marketplace, several online boardgames, and a gamer database to help gamers find each other in the same location.
+<img src="/img/full/bgg-hero.jpg">  
 
-My approach aspired to simplify the previous design of the Board Game Geek website. To create a landing page flow which catered to first time visitors, while balancing a member's page which aggregated content that they would find the most useful. 
+Board Game Geek is the definitive database for sharing, discussing, and discovering boardgames. The database holds reviews, articles, session reports, images, videos, and files for over 84,000 different games and expansions, and over 23,000 game designers. Visitors interact with the site via bulletin boards, trading on an onsite marketplace, forum discussions, and contributing to the wiki-style game database.
 
-When presented to a select audience (i.e. /r/boardgames) the design was met equal with praise and criticism. The new flow appealed most to new visitors whom were finding it difficult to overcome the barrier of entry of the previous design. Veteran members though found it too organic and denounced the flow as not having enough functionality to compliment power-users.
+---  
 
-In the end, the design was shelved. The perspectives and opinions which the project generated were beneficial for the ongoing efforts to improve online board game communities. The project developed connections for my practice which were related to the field of boardgaming. I'm glad to of had the opportunity to present this new perspective.
+<img src="/img/full/bgg-1.jpg" style="border-radius:15px; border:1px solid #e5e5e5;">  
+  
 """
 
 [[projects]]
@@ -68,24 +74,23 @@ In the end, the design was shelved. The perspectives and opinions which the proj
 	'role'		= 'Design'
 	'excerpt'   = 'Online wellness program for college campuses.'
 	'url'		= 'http://prothemesonline.com/'
-	'lead'		= 'Flexible content with class'
 	'text'		= """
+<img src="/img/full/pro-hero.jpg">  
+
 Pro Themes connected with me after recognizing my work
 on previous Wordpress projects. They sought a designer
 whom was familiar with the engine and had a clean visual style.
 We were able to quickly share moodboards and agree on an
 aesthetic direction which would become Schema.
 Schema is a powerful business theme that provides a fast way for
-companies or freelancers to create an awesome online presence.
+companies or freelancers to create an online presence. 
 
-Schema brings plenty of customization possibilities like access to
-all Google Fonts, full color control, layout control, logo upload, full
-screen slider, header image, sticky navigation and much more.
-Also, Schema provides all the construction blocks you need to
-rapidly create an engaging front page.
+Schema is currently ranked within the top 100 free Wordpress themes.
 
-Schema is currently ranked within the top 100 free Wordpress
-themes on the Wordpress.org theme directory.
+---  
+
+<img src="/img/full/pro.jpg" style="border-radius:15px; border:1px solid #e5e5e5;">  
+
 """
 
 [[projects]]
@@ -95,11 +100,16 @@ themes on the Wordpress.org theme directory.
 	'role'		= 'Design'
 	'excerpt'   = 'Informational service site for premier catering company'
 	'text'		= """
- More than just food, it’s full service experience. From your first call to clean-up, Happy Day Catering is here to help you every step of the way in making your event perfect. It all starts with a discussion with one of our even planners. We find out what you need and can help from everything from your menu to decor to valet.
+<img src="/img/full/happy-hero.jpg">  
 
 Happy Day Catering sought a designer whom could provide a fun atmosphere which didn't overwhelm visitors. Together we worked on creating styles, direction, and mockups until a theme clicked. Happy day catering was ecstatic to continue pushing forward with my service after having solidified our first design.
 
 The designs are currently being developed by an internal team at Happy Day Catering. 
+
+---
+
+<img src="/img/full/happy.jpg" style="border-radius:15px; border:1px solid #e5e5e5;">  
+
 """
 
 [[projects]]
@@ -111,11 +121,16 @@ The designs are currently being developed by an internal team at Happy Day Cater
 	'tech'		= 'Wordpress, Shopify'
 	'url'		= 'http://junestones.com/'
 	'text'		= """
-Ignite your highest vibration with a JuneStones wrap bracelet. JuneStones invites you to harness the metaphysical healing properties and dynamic beauty of gemstones from around the world. Each piece is lovingly handmade with beautiful natural leather and a signature JuneStones button to inspire, and to transform your energy, heart and mind.
+<img src="/img/full/june-hero.jpg">  
 
-Our goal was to implement a cost efficient eccomerce solution which offered visitors a premium experience and June an easy way to manage product. After extensive research, the decision was laid forth to build the site using Wordpress and fetch product information via Shopify. Two content management systems don't seem ideal, but each platform offers the best experience for each facade of June's website.
+Ignite your highest vibration with a JuneStones wrap bracelet. Our goal was to implement a cost efficient eccomerce solution which offered visitors a premium experience and June an easy way to manage product. After extensive research, the decision was laid forth to build the site using Wordpress and fetch product information via Shopify. 
 
 JuneStones has seen a steady rise in online transactions, and receives a lot less requests for support with her new website. Discover her bracelets and you might just find the treasured mana each bracelet invokes!
+
+---
+
+<img src="/img/full/june.jpg" style="border-radius:15px; border:1px solid #e5e5e5;">  
+
 """
 
 [[projects]]
@@ -124,13 +139,15 @@ JuneStones has seen a steady rise in online transactions, and receives a lot les
 	'date'		= 2015
 	'role'		= 'Design'
 	'excerpt'   = 'Service pairing client with landscape professionals.'
-	'collab'	= 'Alexander Mans'
 	'text'		= """
-If you are looking to recreate your landscape into something truly unique and amazing, then you need a landscape architect or designer. How do you find one? Not easily. Right now finding a landscape architect or designer requires the yellow pages or word of mouth. Both are nonspecific and unhelpful and leave you with the uncomfortable task of calling busy professionals who rarely take random phone calls.
+<img src="/img/full/hortigo-hero.jpg">  
 
-Enter Hortigo... Using our cloud-based marketplace platform we connect customers and professionals while facilitating easier business. Starting with how customers find and contact landscape professionals and continuing all the way through the design and construction phases, we are the link between the two.
+Develop your landscape into something truly unique and amazing. Hortigo matches homeowner with landscape architects and manages the process involved; From initial communication, to contract, to scheduling a build dates, and then final payment. This streamlined approach provides customers with the landscape of their dreams, and professionals with increased customer acquisition and ease of payments.
 
-We facilitate ease of communication, payments, and contracts between professionals and customers. This streamlined approach provides customers with the landscape of their dreams; and professionals with increased customer acquisition and ease of payments.
+---
+
+<img src="/img/full/hortigo.jpg" style="border-radius:15px; border:1px solid #e5e5e5;"> 
+
 """
 
 [[projects]]
@@ -140,18 +157,8 @@ We facilitate ease of communication, payments, and contracts between professiona
 	'role'		= 'Design, Development'
 	'excerpt'   = 'Geolocation search directory to match client with therapist.'
 	'url'		= 'http://openpathcollective.org/'
-	'lead'		= 'Therapy within reach'
 	'text'		= """
-Open Path Psychotherapy Collective is a global network of
-mental health professionals dedicated to providing mental
-health care, at a steeply reduced rate, to families in need. Working
-collaboratively, we developed a site that organizes the valuable
-information the Collective offers in a way that clinicians and
-clients alike can easily navigate.
-
-A content-heavy site demands a purposeful and sustainable page
-hierarchy. Page layouts drive specific audiences to their target
-destinations and ultimately connect clinician with client.
+<img src="/img/full/oppc-hero.jpg">  
 
 My partnership with Open Path has been an ongoing relationship
 anchored by mutual respect and shares responsibility. We’re
@@ -160,6 +167,11 @@ provide inexpensive educational courses for eligible individuals,
 and families. Working with Open Path continues to be a genuine
 experience as we develop meaningful ways to positively impact
 the future of mental health.
+
+---
+
+<img src="/img/full/oppc.jpg" style="border-radius:15px; border:1px solid #e5e5e5;"> 
+
 """
 
 [[projects]]
@@ -170,13 +182,13 @@ the future of mental health.
 	'excerpt'   = 'Contemporary gallery and ecommerce website.'
 	'url'		= 'http://emergeast.com/'
 	'text'		= """
-EMERGEAST is a premier influencer of Middle Eastern artists through succesful pop-up galleries, auctions, publications, and art walks; But their website made them look like a bargain-bin poster warehouse. Together we collaborated on developing a new digital presence which captures the unique, inspiring atmosphere which exposes the Middle East’s most talented artists in a rich, creative experience.
+<img src="/img/full/ee-hero.jpg">  
 
-I was approached by the EMERGEAST team near the end of 2015 to audit this current build. To say the least, it wasn't without faults. Most notable was that this was an eCommerce site without a checkout. Visitors needed to directly message the principles via a product form in order to request a purchase. 
+EMERGEAST is a premier influencer of Middle Eastern artists through succesful pop-up galleries, auctions, publications, and art walks; But their website made them look like a bargain-bin poster warehouse. Together we collaborated on developing a new digital presence which captures the unique, inspiring atmosphere of Middle East’s most talented artists in a rich, creative experience.
 
-After extensive research, we decided the best solution was to build a custom platform which used Wordpress as a base foundation. Integrating several APIs, such as Stripe for checkout, and Shippo for packaging, the end product was incredible fluid for the Emergeast team to edit, add, and update their inventory.
+---
 
-Explore Emergeast's current live site and and discover their inspiring collection of fine art. 
+<img src="/img/full/ee.jpg" style="border-radius:15px; border:1px solid #e5e5e5;"> 
 """
 
 [[projects]]

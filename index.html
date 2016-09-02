@@ -360,61 +360,65 @@ textarea {
  
 
 .details {
-  max-width: none;
+  max-width: 900px;
   background: #fff;
-  margin: 10px; }
+  margin: 10px;
+  border-radius: 10px; }
 
-.details__image {
-  padding: 0;
-  background-color: #666; }
-
-.details__text__lead {
+.details__lead {
   font-size: 48px;
   font-weight: 600;
   line-height: 1.2;
-  margin: 0 0 10px 0; }
+  padding: 20px 30px 10px; }
 
-.details__text__details {
+.details__lead ul {
   font-size: 15px;
-  padding: 20px 0;
-  border-top: 5px solid #000;
-  border-bottom: 5px solid #000; }
+  font-weight: 400;
+  margin: 5px 0 0 0; }
 
-.details__text__details span { 
-  display: block;
-  margin-bottom: 5px; }
+.details__lead li {
+  display: inline-block;
+  margin: 0 20px 5px 0; }
 
-.details__text__details span:last-of-type { margin-bottom: 0 } 
+.details__lead i { color: #666; }
 
-.details__text { padding: 20px 40px 20px 30px !important; }
+.details a { text-decoration: underline; }
 
-.details__text__details a,
-.details__text__content a { text-decoration: underline; }
+.details__content a { color: #ff0000; }
 
-.details__text__content { margin: 20px 0; }
+.details__content ul { margin: 0 0 30px 0 }
 
-.details__text__content:first-letter {
-    width: auto;
-    height: 48px;
-    font-size: 56px;
-    line-height: 51px;
-    font-family: "Times New Roman", Times, serif;
-    position: relative;
-    padding: 0 5px 0 0;
-    float: left; }
-
-.details__text__content a { color: #ff0000; }
-
-.details__text__content ul { margin: 0 0 30px 0 }
-
-.details__text__content ul li {
+.details__content ul li {
   color: #777;
   font-size: 16px;
   list-style: disc;
-  margin: 0 0 15px 20px;
-}
+  margin: 0 0 15px 20px; }
+
+.details__content p { 
+  max-width: 700px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.details hr {
+  max-width: 100px;
+  height: 5px;
+  margin: 40px auto; }
 
 .fleuron { color: #1a1a1a; }
+
+.details__content:first-letter {
+  width: auto;
+  height: 48px;
+  font-size: 56px;
+  line-height: 51px;
+  font-family: "Times New Roman", Times, serif;
+  position: relative;
+  padding: 0 5px 0 0;
+  float: left; }
 
  
  
@@ -812,7 +816,9 @@ img.mfp-img {
 
   .nav__name { display: inline-block; }
 
-  .details { margin: 40px; }
+  .details { margin: 60px; }
+
+  .mfp-close { right: 20px; }
 
   .mfp-arrow-left {
     right: auto;
@@ -821,17 +827,21 @@ img.mfp-img {
 
   .mfp-arrow { 
     top: 50%;
-    right: 0;
+    right: 20px;
     margin: -40px 0 0 0;
     padding: 50px 20px;
   }
 
 }
 
+@media only screen and (min-width: 62.50em) {
+  
+}
+
 @media only screen and (min-width: 63.750em) {
   
-  .details__text__content { margin: 20px 0 100px; }
   .items .item:nth-of-type(9){ display: block; }
+  
 
 }
 
@@ -839,6 +849,7 @@ img.mfp-img {
 
   .nav__logo { left: 0; }
   .nav__name { left: 110px; }
+  .details { margin-left: auto; margin-right: auto; }
 
 }
 
@@ -950,7 +961,7 @@ jQuery(document).ready(function($) {
 			closeBtnInside: false,
 			removalDelay: 300,
 			mainClass: 'my-mfp-zoom-in',
-			fixedContentPos: false,
+			fixedContentPos: true,
 			fixedBgPos: true,
 			alignTop: true,
 			closeMarkup: '<button title="%title%" type="button" class="mfp-close zoom-anim-dialog">&#215;</button>',
@@ -968,7 +979,7 @@ jQuery(document).ready(function($) {
 		preloader: false,
 		midClick: true,
 		removalDelay: 300,
-		fixedContentPos: false,
+		fixedContentPos: true,
 		fixedBgPos: true,
 		alignTop: true,
 		mainClass: 'my-mfp-zoom-in',
@@ -1183,264 +1194,212 @@ jQuery(document).ready(function($) {
 <div id="details" class="mfp-hide">
 	
 		<section id="dialog-mopcap" class="row details zoom-anim-dialog" data-item="mopcap">
-				<aside class="small-12 large-4 columns details__text">
-					<div class="scroll">
-						<div class="details__text__lead">
-							
-								Magic of Persia
-							
-						</div>
-						<div class="details__text__details">
-							 <span><i>URL:</i> <a href="http://mopcap.com/">http://mopcap.com/</a> </span> 
-							 <span><i>Role:</i> Design, Development </span> 
-							 <span><i>Technology:</i> Wordpress, Contentful </span> 
-							
-						</div>
-						
-							<div class="details__text__content">Magic of Persia is an inspiring art foundation that promotes and raises awareness of Iranian art and culture worldwide. Every 2 years Magic of Persia hosts an open call for submissions for their primary programme, Magic of Persia Contemporary Art Prize (MOPCAP). Magic of Persia sought a designer that could design and develop a minimal aesthetic website with application functionality for artist&rsquo;s to submit artwork.</p>
 
-<p><a href="https://www.behance.net/gallery/42239919/Magic-of-Persia" target="_blank">Read Case Study on Behance →</a></div>
+				<div class="details__lead">
+					Magic of Persia
+					<ul>
+						<li><span><i>URL:</i> <a href="http://mopcap.com/">http://mopcap.com/</a> </span> 
+						<li><span><i>Role:</i> Design, Development </span> 
+						<li><span><i>Technology:</i> Wordpress, Contentful </span> 
 						
-					</div>
-				</aside>
-				<aside class="small-12 large-8 columns details__image">
-					<div class="scroll">
-						<img src="/img/full/mopcap.jpg" />
-					</div>
-				</aside>
-			</section>
+					</ul>
+				</div>
+
+				
+					<div class="details__content"><img src="/img/full/mopcap-hero.jpg"></p>
+
+<p>Magic of Persia is an inspiring art foundation that promotes and raises awareness of Iranian art and culture worldwide. Every 2 years Magic of Persia hosts an open call for submissions for their primary programme, Magic of Persia Contemporary Art Prize (MOPCAP). Magic of Persia sought a designer that could design and develop a minimal aesthetic website with application functionality for artist&rsquo;s to submit artwork.</p>
+
+<hr />
+
+<p><img src="/img/full/mopcap-1.jpg"></p>
+
+<p><img src="/img/full/mopcap-2.jpg"></p>
+
+<p><img src="/img/full/mopcap-3.jpg"> <p><img src="/img/full/fleuron.jpg" style="width: 50px; margin: 20px 0 0; opacity: 0.25;"></p></div>
+				
+
+		</section>
 	
 		<section id="dialog-mhe" class="row details zoom-anim-dialog" data-item="mhe">
-				<aside class="small-12 large-4 columns details__text">
-					<div class="scroll">
-						<div class="details__text__lead">
-							
-								Open Path Wellness
-							
-						</div>
-						<div class="details__text__details">
-							 <span><i>URL:</i> <a href="http://mentalhealth.openpathcollective.org/">http://mentalhealth.openpathcollective.org/</a> </span> 
-							 <span><i>Role:</i> Design, Development </span> 
-							 <span><i>Technology:</i> Wordpress, Contentful </span> 
-							
-						</div>
+
+				<div class="details__lead">
+					Open Path Wellness
+					<ul>
+						<li><span><i>URL:</i> <a href="http://mentalhealth.openpathcollective.org/">http://mentalhealth.openpathcollective.org/</a> </span> 
+						<li><span><i>Role:</i> Design, Development </span> 
+						<li><span><i>Technology:</i> Wordpress, Contentful </span> 
 						
-							<div class="details__text__content">Open Path Psychotherapy Collective is a global network of
+					</ul>
+				</div>
+
+				
+					<div class="details__content"><img src="/img/full/mhe-hero.jpg"></p>
+
+<p>Open Path Psychotherapy Collective is a global network of
 mental health professionals dedicated to providing mental
 health care, at a steeply reduced rate, to families in need. Working
 collaboratively, we developed a site that organizes the valuable
 information the Collective offers in a way that clinicians and
 clients alike can easily navigate.</p>
 
-<p>A content-heavy site demands a purposeful and sustainable page
-hierarchy. Page layouts drive specific audiences to their target
-destinations and ultimately connect clinician with client.</p>
+<hr />
 
-<p>My partnership with Open Path has been an ongoing relationship
-anchored by mutual respect and shares responsibility. We’re
-currently working on our third major installment which will
-provide inexpensive educational courses for eligible individuals,
-and families. Working with Open Path continues to be a genuine
-experience as we develop meaningful ways to positively impact
-the future of mental health.</div>
-						
-					</div>
-				</aside>
-				<aside class="small-12 large-8 columns details__image">
-					<div class="scroll">
-						<img src="/img/full/mhe.jpg" />
-					</div>
-				</aside>
-			</section>
+<p><img src="/img/full/mhe-1.jpg"></p>
+
+<p><img src="/img/full/mhe-2.jpg"></p>
+
+<p><img src="/img/full/mhe-3.jpg"> <p><img src="/img/full/fleuron.jpg" style="width: 50px; margin: 20px 0 0; opacity: 0.25;"></p></div>
+				
+
+		</section>
 	
 		<section id="dialog-bgg" class="row details zoom-anim-dialog" data-item="bgg">
-				<aside class="small-12 large-4 columns details__text">
-					<div class="scroll">
-						<div class="details__text__lead">
-							
-								Not just for geeks
-							
-						</div>
-						<div class="details__text__details">
-							 <span><i>URL:</i> <a href="https://boardgamegeek.com/">https://boardgamegeek.com/</a> </span> 
-							 <span><i>Role:</i> Design </span> 
-							
-							
-						</div>
+
+				<div class="details__lead">
+					Board Game Geek
+					<ul>
+						<li><span><i>URL:</i> <a href="https://boardgamegeek.com/">https://boardgamegeek.com/</a> </span> 
+						<li><span><i>Role:</i> Conceptual Design </span> 
 						
-							<div class="details__text__content">Board Game Geek is the definitive database for sharing, discussing, and discovering boardgames. The database holds reviews, articles, session reports, images, videos, and files for over 84,000 different games and expansions, and over 23,000 game designers. BoardGameGeek includes German-style board games, wargames, card games and other tabletop games, as well as public-domain card games like Spades. The site also features bulletin boards, a marketplace, several online boardgames, and a gamer database to help gamers find each other in the same location.</p>
-
-<p>My approach aspired to simplify the previous design of the Board Game Geek website. To create a landing page flow which catered to first time visitors, while balancing a member&rsquo;s page which aggregated content that they would find the most useful.</p>
-
-<p>When presented to a select audience (i.e. /r/boardgames) the design was met equal with praise and criticism. The new flow appealed most to new visitors whom were finding it difficult to overcome the barrier of entry of the previous design. Veteran members though found it too organic and denounced the flow as not having enough functionality to compliment power-users.</p>
-
-<p>In the end, the design was shelved. The perspectives and opinions which the project generated were beneficial for the ongoing efforts to improve online board game communities. The project developed connections for my practice which were related to the field of boardgaming. I&rsquo;m glad to of had the opportunity to present this new perspective.</div>
 						
-					</div>
-				</aside>
-				<aside class="small-12 large-8 columns details__image">
-					<div class="scroll">
-						<img src="/img/full/bgg.jpg" />
-					</div>
-				</aside>
-			</section>
+					</ul>
+				</div>
+
+				
+					<div class="details__content"><img src="/img/full/bgg-hero.jpg"></p>
+
+<p>Board Game Geek is the definitive database for sharing, discussing, and discovering boardgames. The database holds reviews, articles, session reports, images, videos, and files for over 84,000 different games and expansions, and over 23,000 game designers. Visitors interact with the site via bulletin boards, trading on an onsite marketplace, forum discussions, and contributing to the wiki-style game database.</p>
+
+<hr />
+
+<p><img src="/img/full/bgg-1.jpg" style="border-radius:15px; border:1px solid #e5e5e5;"> <p><img src="/img/full/fleuron.jpg" style="width: 50px; margin: 20px 0 0; opacity: 0.25;"></p></div>
+				
+
+		</section>
 	
 		<section id="dialog-pro" class="row details zoom-anim-dialog" data-item="pro">
-				<aside class="small-12 large-4 columns details__text">
-					<div class="scroll">
-						<div class="details__text__lead">
-							
-								Flexible content with class
-							
-						</div>
-						<div class="details__text__details">
-							 <span><i>URL:</i> <a href="http://prothemesonline.com/">http://prothemesonline.com/</a> </span> 
-							 <span><i>Role:</i> Design </span> 
-							
-							
-						</div>
+
+				<div class="details__lead">
+					Pro Theme Schema
+					<ul>
+						<li><span><i>URL:</i> <a href="http://prothemesonline.com/">http://prothemesonline.com/</a> </span> 
+						<li><span><i>Role:</i> Design </span> 
 						
-							<div class="details__text__content">Pro Themes connected with me after recognizing my work
+						
+					</ul>
+				</div>
+
+				
+					<div class="details__content"><img src="/img/full/pro-hero.jpg"></p>
+
+<p>Pro Themes connected with me after recognizing my work
 on previous Wordpress projects. They sought a designer
 whom was familiar with the engine and had a clean visual style.
 We were able to quickly share moodboards and agree on an
 aesthetic direction which would become Schema.
 Schema is a powerful business theme that provides a fast way for
-companies or freelancers to create an awesome online presence.</p>
+companies or freelancers to create an online presence.</p>
 
-<p>Schema brings plenty of customization possibilities like access to
-all Google Fonts, full color control, layout control, logo upload, full
-screen slider, header image, sticky navigation and much more.
-Also, Schema provides all the construction blocks you need to
-rapidly create an engaging front page.</p>
+<p>Schema is currently ranked within the top 100 free Wordpress themes.</p>
 
-<p>Schema is currently ranked within the top 100 free Wordpress
-themes on the Wordpress.org theme directory.</div>
-						
-					</div>
-				</aside>
-				<aside class="small-12 large-8 columns details__image">
-					<div class="scroll">
-						<img src="/img/full/pro.jpg" />
-					</div>
-				</aside>
-			</section>
+<hr />
+
+<p><img src="/img/full/pro.jpg" style="border-radius:15px; border:1px solid #e5e5e5;"> <p><img src="/img/full/fleuron.jpg" style="width: 50px; margin: 20px 0 0; opacity: 0.25;"></p></div>
+				
+
+		</section>
 	
 		<section id="dialog-happy" class="row details zoom-anim-dialog" data-item="happy">
-				<aside class="small-12 large-4 columns details__text">
-					<div class="scroll">
-						<div class="details__text__lead">
-							
-								Happy Day Catering
-							
-						</div>
-						<div class="details__text__details">
-							
-							 <span><i>Role:</i> Design </span> 
-							
-							
-						</div>
+
+				<div class="details__lead">
+					Happy Day Catering
+					<ul>
 						
-							<div class="details__text__content">More than just food, it’s full service experience. From your first call to clean-up, Happy Day Catering is here to help you every step of the way in making your event perfect. It all starts with a discussion with one of our even planners. We find out what you need and can help from everything from your menu to decor to valet.</p>
+						<li><span><i>Role:</i> Design </span> 
+						
+						
+					</ul>
+				</div>
+
+				
+					<div class="details__content"><img src="/img/full/happy-hero.jpg"></p>
 
 <p>Happy Day Catering sought a designer whom could provide a fun atmosphere which didn&rsquo;t overwhelm visitors. Together we worked on creating styles, direction, and mockups until a theme clicked. Happy day catering was ecstatic to continue pushing forward with my service after having solidified our first design.</p>
 
-<p>The designs are currently being developed by an internal team at Happy Day Catering.</div>
-						
-					</div>
-				</aside>
-				<aside class="small-12 large-8 columns details__image">
-					<div class="scroll">
-						<img src="/img/full/happy.jpg" />
-					</div>
-				</aside>
-			</section>
+<p>The designs are currently being developed by an internal team at Happy Day Catering.</p>
+
+<hr />
+
+<p><img src="/img/full/happy.jpg" style="border-radius:15px; border:1px solid #e5e5e5;"> <p><img src="/img/full/fleuron.jpg" style="width: 50px; margin: 20px 0 0; opacity: 0.25;"></p></div>
+				
+
+		</section>
 	
 		<section id="dialog-june" class="row details zoom-anim-dialog" data-item="june">
-				<aside class="small-12 large-4 columns details__text">
-					<div class="scroll">
-						<div class="details__text__lead">
-							
-								JuneStones
-							
-						</div>
-						<div class="details__text__details">
-							 <span><i>URL:</i> <a href="http://junestones.com/">http://junestones.com/</a> </span> 
-							 <span><i>Role:</i> Design, Development </span> 
-							 <span><i>Technology:</i> Wordpress, Shopify </span> 
-							
-						</div>
-						
-							<div class="details__text__content">Ignite your highest vibration with a JuneStones wrap bracelet. JuneStones invites you to harness the metaphysical healing properties and dynamic beauty of gemstones from around the world. Each piece is lovingly handmade with beautiful natural leather and a signature JuneStones button to inspire, and to transform your energy, heart and mind.</p>
 
-<p>Our goal was to implement a cost efficient eccomerce solution which offered visitors a premium experience and June an easy way to manage product. After extensive research, the decision was laid forth to build the site using Wordpress and fetch product information via Shopify. Two content management systems don&rsquo;t seem ideal, but each platform offers the best experience for each facade of June&rsquo;s website.</p>
-
-<p>JuneStones has seen a steady rise in online transactions, and receives a lot less requests for support with her new website. Discover her bracelets and you might just find the treasured mana each bracelet invokes!</div>
+				<div class="details__lead">
+					JuneStones
+					<ul>
+						<li><span><i>URL:</i> <a href="http://junestones.com/">http://junestones.com/</a> </span> 
+						<li><span><i>Role:</i> Design, Development </span> 
+						<li><span><i>Technology:</i> Wordpress, Shopify </span> 
 						
-					</div>
-				</aside>
-				<aside class="small-12 large-8 columns details__image">
-					<div class="scroll">
-						<img src="/img/full/june.jpg" />
-					</div>
-				</aside>
-			</section>
+					</ul>
+				</div>
+
+				
+					<div class="details__content"><img src="/img/full/june-hero.jpg"></p>
+
+<p>Ignite your highest vibration with a JuneStones wrap bracelet. Our goal was to implement a cost efficient eccomerce solution which offered visitors a premium experience and June an easy way to manage product. After extensive research, the decision was laid forth to build the site using Wordpress and fetch product information via Shopify.</p>
+
+<p>JuneStones has seen a steady rise in online transactions, and receives a lot less requests for support with her new website. Discover her bracelets and you might just find the treasured mana each bracelet invokes!</p>
+
+<hr />
+
+<p><img src="/img/full/june.jpg" style="border-radius:15px; border:1px solid #e5e5e5;"> <p><img src="/img/full/fleuron.jpg" style="width: 50px; margin: 20px 0 0; opacity: 0.25;"></p></div>
+				
+
+		</section>
 	
 		<section id="dialog-hortigo" class="row details zoom-anim-dialog" data-item="hortigo">
-				<aside class="small-12 large-4 columns details__text">
-					<div class="scroll">
-						<div class="details__text__lead">
-							
-								Hortigo
-							
-						</div>
-						<div class="details__text__details">
-							
-							 <span><i>Role:</i> Design </span> 
-							
-							 <span><i>Collaborators:</i> Alexander Mans </span> 
-						</div>
-						
-							<div class="details__text__content">If you are looking to recreate your landscape into something truly unique and amazing, then you need a landscape architect or designer. How do you find one? Not easily. Right now finding a landscape architect or designer requires the yellow pages or word of mouth. Both are nonspecific and unhelpful and leave you with the uncomfortable task of calling busy professionals who rarely take random phone calls.</p>
 
-<p>Enter Hortigo&hellip; Using our cloud-based marketplace platform we connect customers and professionals while facilitating easier business. Starting with how customers find and contact landscape professionals and continuing all the way through the design and construction phases, we are the link between the two.</p>
-
-<p>We facilitate ease of communication, payments, and contracts between professionals and customers. This streamlined approach provides customers with the landscape of their dreams; and professionals with increased customer acquisition and ease of payments.</div>
+				<div class="details__lead">
+					Hortigo
+					<ul>
 						
-					</div>
-				</aside>
-				<aside class="small-12 large-8 columns details__image">
-					<div class="scroll">
-						<img src="/img/full/hortigo.jpg" />
-					</div>
-				</aside>
-			</section>
+						<li><span><i>Role:</i> Design </span> 
+						
+						
+					</ul>
+				</div>
+
+				
+					<div class="details__content"><img src="/img/full/hortigo-hero.jpg"></p>
+
+<p>Develop your landscape into something truly unique and amazing. Hortigo matches homeowner with landscape architects and manages the process involved; From initial communication, to contract, to scheduling a build dates, and then final payment. This streamlined approach provides customers with the landscape of their dreams, and professionals with increased customer acquisition and ease of payments.</p>
+
+<hr />
+
+<p><img src="/img/full/hortigo.jpg" style="border-radius:15px; border:1px solid #e5e5e5;"> <p><img src="/img/full/fleuron.jpg" style="width: 50px; margin: 20px 0 0; opacity: 0.25;"></p></div>
+				
+
+		</section>
 	
 		<section id="dialog-oppc" class="row details zoom-anim-dialog" data-item="oppc">
-				<aside class="small-12 large-4 columns details__text">
-					<div class="scroll">
-						<div class="details__text__lead">
-							
-								Therapy within reach
-							
-						</div>
-						<div class="details__text__details">
-							 <span><i>URL:</i> <a href="http://openpathcollective.org/">http://openpathcollective.org/</a> </span> 
-							 <span><i>Role:</i> Design, Development </span> 
-							
-							
-						</div>
-						
-							<div class="details__text__content">Open Path Psychotherapy Collective is a global network of
-mental health professionals dedicated to providing mental
-health care, at a steeply reduced rate, to families in need. Working
-collaboratively, we developed a site that organizes the valuable
-information the Collective offers in a way that clinicians and
-clients alike can easily navigate.</p>
 
-<p>A content-heavy site demands a purposeful and sustainable page
-hierarchy. Page layouts drive specific audiences to their target
-destinations and ultimately connect clinician with client.</p>
+				<div class="details__lead">
+					Open Path Collective
+					<ul>
+						<li><span><i>URL:</i> <a href="http://openpathcollective.org/">http://openpathcollective.org/</a> </span> 
+						<li><span><i>Role:</i> Design, Development </span> 
+						
+						
+					</ul>
+				</div>
+
+				
+					<div class="details__content"><img src="/img/full/oppc-hero.jpg"></p>
 
 <p>My partnership with Open Path has been an ongoing relationship
 anchored by mutual respect and shares responsibility. We’re
@@ -1448,48 +1407,38 @@ currently working on our third major installment which will
 provide inexpensive educational courses for eligible individuals,
 and families. Working with Open Path continues to be a genuine
 experience as we develop meaningful ways to positively impact
-the future of mental health.</div>
-						
-					</div>
-				</aside>
-				<aside class="small-12 large-8 columns details__image">
-					<div class="scroll">
-						<img src="/img/full/oppc.jpg" />
-					</div>
-				</aside>
-			</section>
+the future of mental health.</p>
+
+<hr />
+
+<p><img src="/img/full/oppc.jpg" style="border-radius:15px; border:1px solid #e5e5e5;"> <p><img src="/img/full/fleuron.jpg" style="width: 50px; margin: 20px 0 0; opacity: 0.25;"></p></div>
+				
+
+		</section>
 	
 		<section id="dialog-ee" class="row details zoom-anim-dialog" data-item="ee">
-				<aside class="small-12 large-4 columns details__text">
-					<div class="scroll">
-						<div class="details__text__lead">
-							
-								Emergeast
-							
-						</div>
-						<div class="details__text__details">
-							 <span><i>URL:</i> <a href="http://emergeast.com/">http://emergeast.com/</a> </span> 
-							 <span><i>Role:</i> Design, Development </span> 
-							
-							
-						</div>
+
+				<div class="details__lead">
+					Emergeast
+					<ul>
+						<li><span><i>URL:</i> <a href="http://emergeast.com/">http://emergeast.com/</a> </span> 
+						<li><span><i>Role:</i> Design, Development </span> 
 						
-							<div class="details__text__content">EMERGEAST is a premier influencer of Middle Eastern artists through succesful pop-up galleries, auctions, publications, and art walks; But their website made them look like a bargain-bin poster warehouse. Together we collaborated on developing a new digital presence which captures the unique, inspiring atmosphere which exposes the Middle East’s most talented artists in a rich, creative experience.</p>
-
-<p>I was approached by the EMERGEAST team near the end of 2015 to audit this current build. To say the least, it wasn&rsquo;t without faults. Most notable was that this was an eCommerce site without a checkout. Visitors needed to directly message the principles via a product form in order to request a purchase.</p>
-
-<p>After extensive research, we decided the best solution was to build a custom platform which used Wordpress as a base foundation. Integrating several APIs, such as Stripe for checkout, and Shippo for packaging, the end product was incredible fluid for the Emergeast team to edit, add, and update their inventory.</p>
-
-<p>Explore Emergeast&rsquo;s current live site and and discover their inspiring collection of fine art.</div>
 						
-					</div>
-				</aside>
-				<aside class="small-12 large-8 columns details__image">
-					<div class="scroll">
-						<img src="/img/full/ee.jpg" />
-					</div>
-				</aside>
-			</section>
+					</ul>
+				</div>
+
+				
+					<div class="details__content"><img src="/img/full/ee-hero.jpg"></p>
+
+<p>EMERGEAST is a premier influencer of Middle Eastern artists through succesful pop-up galleries, auctions, publications, and art walks; But their website made them look like a bargain-bin poster warehouse. Together we collaborated on developing a new digital presence which captures the unique, inspiring atmosphere of Middle East’s most talented artists in a rich, creative experience.</p>
+
+<hr />
+
+<p><img src="/img/full/ee.jpg" style="border-radius:15px; border:1px solid #e5e5e5;"> <p><img src="/img/full/fleuron.jpg" style="width: 50px; margin: 20px 0 0; opacity: 0.25;"></p></div>
+				
+
+		</section>
 	
 </div>
 
