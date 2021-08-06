@@ -3,22 +3,13 @@ jQuery(document).ready(function($) {
 	//CREDITS
 	console.log("%cDesign & Development by https://benrosati.com", "color: #4fb06f; font-style: italic");	
 	
-	// var welcomeTL = gsap.timeline({delay: 0.5});
-	// welcomeTL.to(".lettermark--b", {opacity: 1, y: 0, duration: 0.6});
-	// welcomeTL.to(".lettermark--r", {opacity: 1, y: 0, duration: 0.6}, 0);
-	// welcomeTL.to(".logo .divider", {transformOrigin: "center center", height: "26px", y:0, duration: 0.3, delay: -.2}, 1);
-	// welcomeTL.to(".logo .name", {transformOrigin: "left center", opacity: 1, x: 0,duration: .5, delay: -.5}, 2);
-	// welcomeTL.to(".logo .title", {transformOrigin: "left center", opacity: 1, x: 0, duration: .5, delay: -.3}, 2);
-	// welcomeTL.to(".projects li a", {opacity: 1, y: 0, stagger: {amount: 1}}, 2.5);
-	// welcomeTL.to(".projects .divider", {height: "100%", duration: 1}, 2.5);
-	
-	// $(".projects li").each(function(i, el){
-	// 	welcomeTL.to($(el).find(".order"), {opacity: 1, y: 0, duration: 0.2, delay: -0.1});
-	// 	welcomeTL.to($(el).find(".title"), {opacity: 1, y: 0, duration: 0.2, delay: -0.1});
-	// 	welcomeTL.to($(el).find(".role"), {opacity: 1, x: 0, duration: 0.2, delay: -0.1});
-	// }); 15offki7w2t
-	
-	
+	var welcomeTL = gsap.timeline({delay:0.25});
+	welcomeTL.fromTo(".intro-content", {opacity: 0, y: -20}, {opacity: 1, y: 0, duration: 1}, 0);
+	welcomeTL.fromTo(".laurel-mask", {opacity: 1}, {height: 0, duration: 1.5}, 0.2);
+	welcomeTL.fromTo(".project", {opacity: 0, scale: 0.6}, {opacity: 1, scale: 1, stagger: 0.2}, 0.5);
+	welcomeTL.fromTo("footer", {opacity: 0, y: -10}, {opacity: 1, y: 1, duration: 0.5}, ">-0.5");
+	welcomeTL.fromTo(".later img", {y: "100%"}, {y: "10px", duration: 1, ease: "back.out" }, ">0.5");
+
 	//CURSOR
 	mousePos = { x: 0, y: 0, scrollX: 0, scrollY: 0};
 
@@ -69,26 +60,6 @@ jQuery(document).ready(function($) {
 	}, function(e){
 		cursorTL.timeScale(2).reverse(0);
 	});
-
-	//NOISE
-	// TweenMax.to('.noise', .1, {repeat:-1, onRepeat: repeatNoise,	ease:SteppedEase.config(1)});
-	// function repeatNoise(){
-	// 	TweenMax.set('.noise', {backgroundPosition: Math.floor(Math.random() * 100) + 1 + "% " + Math.floor(Math.random() * 10) + 1 + "%"});
-	// }
-
-	//HOVER
-	// $(".archive li a").hover(function(el){
-	// 	$(".preview img").attr("src", $(this).attr("data-thumbnail"));
-	// 	gsap.to(".preview img", {duration: 0.3, rotation: getRandomInt(-15,15), opacity: 1});		
-	// }, function(e){
-	// 	gsap.to(".preview img", {duration: 0.3, rotation: 0, opacity: 0});
-	// });
-
-	// $(".archive ul").hover(function(){
-	// 	$("body").addClass("active");
-	// }, function(){
-	// 	$("body").removeClass("active");
-	// });
 	
 });
 
