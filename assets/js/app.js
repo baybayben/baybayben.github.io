@@ -1,0 +1,112 @@
+jQuery(document).ready(function($) {
+
+	//CREDITS
+	console.log("%cDesign & Development by https://benrosati.com", "color: #4fb06f; font-style: italic");	
+	
+	// var welcomeTL = gsap.timeline({delay: 0.5});
+	// welcomeTL.to(".lettermark--b", {opacity: 1, y: 0, duration: 0.6});
+	// welcomeTL.to(".lettermark--r", {opacity: 1, y: 0, duration: 0.6}, 0);
+	// welcomeTL.to(".logo .divider", {transformOrigin: "center center", height: "26px", y:0, duration: 0.3, delay: -.2}, 1);
+	// welcomeTL.to(".logo .name", {transformOrigin: "left center", opacity: 1, x: 0,duration: .5, delay: -.5}, 2);
+	// welcomeTL.to(".logo .title", {transformOrigin: "left center", opacity: 1, x: 0, duration: .5, delay: -.3}, 2);
+	// welcomeTL.to(".projects li a", {opacity: 1, y: 0, stagger: {amount: 1}}, 2.5);
+	// welcomeTL.to(".projects .divider", {height: "100%", duration: 1}, 2.5);
+	
+	// $(".projects li").each(function(i, el){
+	// 	welcomeTL.to($(el).find(".order"), {opacity: 1, y: 0, duration: 0.2, delay: -0.1});
+	// 	welcomeTL.to($(el).find(".title"), {opacity: 1, y: 0, duration: 0.2, delay: -0.1});
+	// 	welcomeTL.to($(el).find(".role"), {opacity: 1, x: 0, duration: 0.2, delay: -0.1});
+	// }); 15offki7w2t
+	
+	
+	//CURSOR
+	mousePos = { x: 0, y: 0, scrollX: 0, scrollY: 0};
+
+	var cursorTL = gsap.timeline({paused:true});
+	cursorTL.to(".cursor .circle", {duration: 0.4, scale: 1, ease: "back.out"}, 0);
+	
+	$(window).on("mouseover", function(e){
+		gsap.set(".cursor", {x: e.pageX, y: e.pageY});
+		gsap.to(".cursor", {duration: 0.1, opacity: 1});
+	});
+	
+	$(window).on("mousemove", function(e){
+		mousePos.x = e.pageX; //clientX
+		mousePos.y = e.pageY; //clientY
+		gsap.to(".cursor-main", {duration: 0.1, x: mousePos.x, y: mousePos.y});
+		gsap.to(".cursor-tail-1", {duration: 0.13, x: mousePos.x, y: mousePos.y});
+		gsap.to(".cursor-tail-2", {duration: 0.15, x: mousePos.x, y: mousePos.y});
+		gsap.to(".cursor-tail-3", {duration: 0.17, x: mousePos.x, y: mousePos.y});
+		gsap.to(".cursor-tail-4", {duration: 0.19, x: mousePos.x, y: mousePos.y});
+		gsap.to(".cursor-tail-5", {duration: 0.21, x: mousePos.x, y: mousePos.y});
+		gsap.to(".cursor-tail-6", {duration: 0.23, x: mousePos.x, y: mousePos.y});
+		gsap.to(".preview", {duration: 1, x: mousePos.x, y: mousePos.y});
+	});
+
+	$(window).on("scroll", function(e) {
+        if(mousePos.scrollX != $(document).scrollLeft()){
+            mousePos.x -= mousePos.scrollX;
+            mousePos.scrollX = $(document).scrollLeft();
+            mousePos.x += mousePos.scrollX;
+        }
+        if(mousePos.scrollY != $(document).scrollTop()){
+            mousePos.y -= mousePos.scrollY;
+            mousePos.scrollY = $(document).scrollTop();
+            mousePos.y += mousePos.scrollY;
+        }
+		gsap.set(".cursor-main", { x: mousePos.x, y: mousePos.y});
+		gsap.set(".cursor-tail-1", { x: mousePos.x, y: mousePos.y});
+		gsap.set(".cursor-tail-2", { x: mousePos.x, y: mousePos.y});
+		gsap.set(".cursor-tail-3", { x: mousePos.x, y: mousePos.y});
+		gsap.set(".cursor-tail-4", { x: mousePos.x, y: mousePos.y});
+		gsap.set(".cursor-tail-5", { x: mousePos.x, y: mousePos.y});
+		gsap.set(".cursor-tail-6", { x: mousePos.x, y: mousePos.y});
+		gsap.set(".preview", { x: mousePos.x, y: mousePos.y});
+    });
+	
+	$("a").hover(function(e){
+		cursorTL.timeScale(1).play(0);
+	}, function(e){
+		cursorTL.timeScale(2).reverse(0);
+	});
+
+	//NOISE
+	// TweenMax.to('.noise', .1, {repeat:-1, onRepeat: repeatNoise,	ease:SteppedEase.config(1)});
+	// function repeatNoise(){
+	// 	TweenMax.set('.noise', {backgroundPosition: Math.floor(Math.random() * 100) + 1 + "% " + Math.floor(Math.random() * 10) + 1 + "%"});
+	// }
+
+	//HOVER
+	// $(".archive li a").hover(function(el){
+	// 	$(".preview img").attr("src", $(this).attr("data-thumbnail"));
+	// 	gsap.to(".preview img", {duration: 0.3, rotation: getRandomInt(-15,15), opacity: 1});		
+	// }, function(e){
+	// 	gsap.to(".preview img", {duration: 0.3, rotation: 0, opacity: 0});
+	// });
+
+	// $(".archive ul").hover(function(){
+	// 	$("body").addClass("active");
+	// }, function(){
+	// 	$("body").removeClass("active");
+	// });
+	
+});
+
+// var portfolio = "";
+// var load = "";
+
+// for (i=0; i<art.length; i++){
+//   var count = i + 1;
+//    portfolio += "" +
+//       "<li>"+
+//         "<a data-thumbnail=\""+art[i].Preview+"?raw=1\">" +
+//           "<div class=\"order\">"+(('0' + count).slice(-2))+"</div>" +
+//           "<div class=\"title\">"+art[i].Title+"</div>" +
+//           "<div class=\"role\">"+art[i].Role+"</div>" +
+//         "</a>" +
+//       "</li>";
+// 	load += "<link rel=\"preload\" as=\"image\" href=\""+art[i].Preview+"?raw=1\">";
+// }
+
+// document.getElementById("portfolio").innerHTML = "<ul>" + portfolio + "</ul>";
+// document.getElementById("load").innerHTML = load;

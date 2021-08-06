@@ -1,6 +1,6 @@
-Ben Rosati focuses on developing phenomenal user experiences and building energetic team collaboration. As a designer and developer, Ben has a very open mindset to approaching his work from every angle. His authenticity translates to the work he produces as every asset feels like a one-on-one experience between end-user and brand.
+The digital products which I've had the opportunity to collaborate on have cultivated truly unique experiences for my ongoing practice. My approach comes from an authentic, enthusiastic, and passionate place, which focuses on designing genuine marketing material and developing engaging, successful campaigns.
 
-The digital experiences Ben has cultivated are truly unique to each client he works with. Skittles hired him because they needed a bright and colorful experience that positively oozes joy. Torn Banner needed a gritty, medieval presence to help illustrate their game, Chivalry. Ben is an enthusiastic partner on every project and believes that there is a solution for every problem and every budget.
+Let's connect to discuss whether my past experiences can help you achieve similar success. I'm excited to learn about your goals and answer any questions regarding interactive marketing and website design. I'll be able to provide recommendations and an estimate after a short discussion.
 
-To view his work visit:
+To view samples of my past work please visit:
 http://www.benrosati.com
