@@ -4,9 +4,10 @@ jQuery(document).ready(function($) {
 	console.log("%cDesign & Development by https://benrosati.com", "color: #4fb06f; font-style: italic");	
 	
 	var welcomeTL = gsap.timeline({delay:0.25});
-	welcomeTL.fromTo(".intro-content", {opacity: 0, y: -20}, {opacity: 1, y: 0, duration: 1}, 0);
-	welcomeTL.fromTo(".laurel-mask", {opacity: 1}, {height: 0, duration: 1.5}, 0.2);
-	welcomeTL.fromTo(".project", {opacity: 0, scale: 0.6}, {opacity: 1, scale: 1, stagger: 0.2}, 0.5);
+	welcomeTL.to(".flicker", {opacity: 0, width: 0, height: 0, duration: 0.1}, 0);
+	welcomeTL.fromTo(".intro-content", {opacity: 0, y: -20}, {opacity: 1, y: 0, duration: 1}, 0.1);
+	welcomeTL.fromTo(".laurel-mask", {opacity: 1}, {height: 0, duration: 1.5}, 0.3);
+	welcomeTL.fromTo(".project", {opacity: 0, scale: 0.6}, {opacity: 1, scale: 1, stagger: 0.2}, 0.6);
 	welcomeTL.fromTo("footer", {opacity: 0, y: -10}, {opacity: 1, y: 1, duration: 0.5}, ">-0.5");
 	welcomeTL.fromTo(".later img", {y: "100%"}, {y: "10px", duration: 1, ease: "back.out" }, ">0.5");
 
@@ -31,7 +32,6 @@ jQuery(document).ready(function($) {
 		gsap.to(".cursor-tail-4", {duration: 0.19, x: mousePos.x, y: mousePos.y});
 		gsap.to(".cursor-tail-5", {duration: 0.21, x: mousePos.x, y: mousePos.y});
 		gsap.to(".cursor-tail-6", {duration: 0.23, x: mousePos.x, y: mousePos.y});
-		gsap.to(".preview", {duration: 1, x: mousePos.x, y: mousePos.y});
 	});
 
 	$(window).on("scroll", function(e) {
@@ -52,13 +52,42 @@ jQuery(document).ready(function($) {
 		gsap.set(".cursor-tail-4", { x: mousePos.x, y: mousePos.y});
 		gsap.set(".cursor-tail-5", { x: mousePos.x, y: mousePos.y});
 		gsap.set(".cursor-tail-6", { x: mousePos.x, y: mousePos.y});
-		gsap.set(".preview", { x: mousePos.x, y: mousePos.y});
     });
 	
 	$("a").hover(function(e){
 		cursorTL.timeScale(1).play(0);
 	}, function(e){
 		cursorTL.timeScale(2).reverse(0);
+	});
+
+	var projectTL = gsap.timeline({paused:true});
+	projectTL.to(".lightbox", {height: "100%", opacity: 1, duration: 0.4}, 0);
+
+	//PORTFOLIO LIGHTBOX
+	$(".project").on("click", function(){
+		$(".lightbox .title").html($(this).attr("data-title"));
+		$(".lightbox .role").html($(this).attr("data-role"));
+		$(".lightbox .details").html($(this).attr("data-details"));
+		$("body").addClass("noscroll");
+		// if ($(document).height() > $(window).height()) {
+		// 	var scrollTop = ($('html').scrollTop()) ? $('html').scrollTop() : $('body').scrollTop(); // Works for Chrome, Firefox, IE...
+		// 	$('html').addClass('noscroll').css('top', -scrollTop);         
+		// }
+		projectTL.timeScale(1).play(0);
+	});
+
+	var lightboxCloseTL = gsap.timeline({paused:true});
+	lightboxCloseTL.to(".close-circle", {scale: 1, ease: "back.out", duration: 0.2}, 0);
+
+	$(".close").hover(function(e){
+		lightboxCloseTL.timeScale(1).play(0);
+	}, function(e){
+		lightboxCloseTL.timeScale(2).reverse(0);
+	});
+
+	$(".close").on("click", function(e){
+		projectTL.timeScale(2).reverse(0);
+		$("body").removeClass("noscroll");
 	});
 	
 });
