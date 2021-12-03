@@ -508,3 +508,77 @@ OVERLAY
 	}
 
 }
+
+@media screen and (max-width: 600px) {
+
+	.container {
+		padding: 0 30px;
+	}
+
+	.section--intro {
+		padding: 30px 0 60px;
+	}
+
+	.avatar {
+		margin-bottom: 20px;
+	}
+
+	h1 {
+		margin-bottom: 12px;
+	}
+
+	footer {
+		margin-top: 50px;
+		padding: 40px 0;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+
+
+}
+
+@media screen and (max-width: 500px) {
+
+	.container {
+		padding: 0 20px;
+	}
+
+	.section--intro {
+		padding: 15px 0 30px;
+	}
+
+	h1 {
+		font-size: 14px;
+	}
+
+	h2 {
+		font-size: 16px;
+	}
+
+	.section--examples {
+		grid-row-gap: 50px;
+	}
+
+	.button-group {
+		margin-top: 30px;
+	}
+
+	.button {
+		font-size: 14px;
+	}
+
+	.sample {
+		margin: 0 0 10px;
+	}
+	.sample-grid-2,
+	.sample-grid-3 {
+		grid-column-gap: 10px;
+	}	
+
+	.more-grid {
+		grid-column-gap: 10px;
+	}
+}
