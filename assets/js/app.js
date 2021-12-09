@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
 		focusableElementsOffsetY: 10,
 		invert: true
 	};
-	const blobity = new Blobity(options);
+	blobity = new Blobity(options);
 
 	//Init animation
 	var init = gsap.timeline({delay: 0.5});
@@ -61,21 +61,18 @@ jQuery(document).ready(function($) {
    //Change Project via Overlay
    content = "";
 
-   function resetCursor(){
-		blobity.reset();
-   }
-
    function swap(){
-		console.log( "content = " + content );
+		gsap.to('.overlay-scroll', {duration: 0.4, scrollTo: {y:0, x:0}});
 		$(".overlay .container").html( $(".portfolio-item[data-item='"+ content +"']").html() );
-		gsap.to('.overlay .container', {duration: 0.4, opacity: 1, delay: 0.4, onComplete: resetCursor});
+		gsap.to('.overlay .container', {duration: 0.4, opacity: 1, delay: 0.4});
    }
 
    $(document).on('click', ".sample", function(){
+		blobity.destroy();
+		blobity = new Blobity(options);
 		content = $(this).attr("data-item");
-		gsap.to('.overlay-scroll', {duration: 0.4, scrollTo: {y:0, x:0}});
 		gsap.to('.overlay .container', {duration: 0.4, opacity: 0, onComplete: swap});
-		//history.pushState({page : $(this).attr("data-item")}, null, "/" + $(this).attr("data-item"));
+		history.pushState({page : $(this).attr("data-item")}, null, "/" + $(this).attr("data-item"));
 	});
 
 	//Portrait
@@ -94,7 +91,6 @@ jQuery(document).ready(function($) {
 	
 	window.onpopstate = function(event) {
 		if (event.state) {
-			console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
 			switch (event.state.page) {
 				case 'home':
 					tl.reverse();
