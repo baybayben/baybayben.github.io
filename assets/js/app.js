@@ -34,9 +34,9 @@ jQuery(document).ready(function($) {
 
 	$('.example').on('click', function(){
 		$('.overlay').show();
-		var ref = $(this).attr("data-item");
-		$(".overlay .container").html( $(".portfolio-item[data-item='"+ref+"']").html() );
+		$(".overlay .container").html( $(".portfolio-item[data-item='"+ $(this).attr("data-item") +"']").html() );
 		tl.play();
+		history.pushState({page : $(this).attr("data-item")}, null, "/" + $(this).attr("data-item"));
 	});
 
 	//Close Overlay
@@ -44,7 +44,8 @@ jQuery(document).ready(function($) {
 		tl.reverse();
 		setTimeout(function(){
 			$('.overlay').hide();
-		}, 1000); 
+		}, 1000);
+		history.pushState({page : "home"}, null, "/");
 	}
 
 	$('.x').on('click', function(){
@@ -58,17 +59,23 @@ jQuery(document).ready(function($) {
    });
 
    //Change Project via Overlay
+   content = "";
+
+   function resetCursor(){
+		blobity.reset();
+   }
+
+   function swap(){
+		console.log( "content = " + content );
+		$(".overlay .container").html( $(".portfolio-item[data-item='"+ content +"']").html() );
+		gsap.to('.overlay .container', {duration: 0.4, opacity: 1, delay: 0.4, onComplete: resetCursor});
+   }
+
    $(document).on('click', ".sample", function(){
-		var ref = $(this).attr("data-item");
+		content = $(this).attr("data-item");
 		gsap.to('.overlay-scroll', {duration: 0.4, scrollTo: {y:0, x:0}});
-		gsap.to('.overlay .container', {duration: 0.4, opacity: 0});
-		setTimeout(function(){
-			$(".overlay .container").html( $(".portfolio-item[data-item='"+ref+"']").html() );
-		}, 400);
-		gsap.to('.overlay .container', {duration: 0.4, opacity: 1, delay: 0.4});
-		setTimeout(function(){
-			blobity.reset();
-		}, 800);
+		gsap.to('.overlay .container', {duration: 0.4, opacity: 0, onComplete: swap});
+		//history.pushState({page : $(this).attr("data-item")}, null, "/" + $(this).attr("data-item"));
 	});
 
 	//Portrait
@@ -78,22 +85,30 @@ jQuery(document).ready(function($) {
 		gsap.to(".flip", {opacity: 0})
 	});
 
+	//Popstate
+	if (location.pathname == "/") {
+		history.pushState({page : "home"}, null, "/");
+	} else {
+		history.pushState({page : location.pathname}, null, "/" + location.pathname);	
+	}
+	
+	window.onpopstate = function(event) {
+		if (event.state) {
+			console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+			switch (event.state.page) {
+				case 'home':
+					tl.reverse();
+					setTimeout(function(){
+						$('.overlay').hide();
+					}, 1000);
+					break;
+				default:
+					$('.overlay').show();
+					$(".overlay .container").html( $(".portfolio-item[data-item='"+ event.state.page +"']").html() );
+					tl.play();
+			}
+		}
+	}
+
+
 });
-
-// var portfolio = "";
-// var load = "";
-
-// for (i=0; i<art.length; i++){
-//   var count = i + 1;
-//    portfolio += "" +
-//       "<li><span class=\"icon color-red\">//</span>"+
-//         "<a data-thumbnail=\"#"+i+"\">" +
-//           art[i].Title +
-//           "<span class=\"color-steel f-12 ml-1\">"+art[i].Role+"</span>" +
-//         "</a>" +
-//       "</li>";
-// 	///load += "<link rel=\"preload\" as=\"image\" href=\""+art[i].Preview+"?raw=1\">";
-// }
-
-// document.getElementById("portfolio").innerHTML = "<ul>" + portfolio + "</ul>";
-// //document.getElementById("load").innerHTML = load;
