@@ -86,6 +86,9 @@ jQuery(document).ready(function($) {
 	if (location.pathname == "/") {
 		history.pushState({page : "home"}, null, "/");
 	} else {
+		$('.overlay').show();
+		$(".overlay .container").html( $(".portfolio-item[data-item='"+ $(this).attr("data-item") +"']").html() );
+		tl.play();
 		history.pushState({page : location.pathname}, null, "/" + location.pathname);	
 	}
 	
